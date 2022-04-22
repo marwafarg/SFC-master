@@ -1,0 +1,48 @@
+<odoo>
+    <record id="saudi_hr_employee_form_view" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='passport_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True}</attribute>
+                <attribute name="domain">[('employee_id', '=', id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+<record id="saudi_hr_user_form_view" model="ir.ui.view">
+        <field name="name">hr.user.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="hr.res_users_view_form_profile"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='passport_id']" position="attributes">
+                <attribute name="options">{'no_create_edit': True}</attribute>
+                <attribute name="domain">[('employee_id', '=', id)]</attribute>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="saudi_hr_passport_management_hr_form_view" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">res.documents</field>
+        <field name="inherit_id" ref="res_documents.res_documents_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='issue_place']" position="after">
+                <field name="status" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="saudi_hr_passport_management_hr_tree_view" model="ir.ui.view">
+        <field name="name">hr.employee.form</field>
+        <field name="model">res.documents</field>
+        <field name="inherit_id" ref="res_documents.res_documents_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='state']" position="before">
+                <field name="status"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!--    <record id="res_branch_form_view" model="ir.ui.view">-->
+<!--        <field name="name">res.branch.form</field>-->
+<!--        <field name="model">res.branch</field>-->
+<!--        <field name="inherit_id" ref="multi_branches.view_branch_from"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <xpath expr="//div[hasclass('oe_title')]" position="inside">-->
+<!--                <field name="arabic_name" placeholder="Arabic Name(Office)"/>-->
+<!--                <field name="code" placeholder="Branch Code" required="1"/>-->
+<!--            </xpath>-->
+<!--            <field name="phone" position="after">-->
+<!--                <field name="mobile"/>-->
+<!--            </field>-->
+<!--            <field name="zip" position="after">-->
+<!--                <field name="po_box_no" placeholder="P.O. Box"/>-->
+<!--            </field>-->
+<!--            <field name="street" position="before">-->
+<!--                <field name="company_name" placeholder="Company name"/>-->
+<!--            </field>-->
+<!--            <xpath expr="//div[hasclass('o_address_format')]" position="after">-->
+<!--                <label for="arabic_street" string="عنوان" />-->
+<!--                <div>-->
+<!--                    <field name="company_arabic_name" placeholder="اسم الشركة"/>-->
+<!--                    <field name="arabic_street" placeholder="الشارع ..."/>-->
+<!--                    <field name="arabic_street2"/>-->
+<!--                    <div class="address_format">-->
+<!--                        <field name="arabic_city" placeholder="مدينة" style="width: 40%%"/>-->
+<!--                    </div>-->
+<!--                    <field name="arabic_country" placeholder="بلد"/>-->
+<!--                </div>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record id="res_branch_tree_view" model="ir.ui.view">-->
+<!--        <field name="name">res.branch.tree</field>-->
+<!--        <field name="model">res.branch</field>-->
+<!--        <field name="inherit_id" ref="multi_branches.view_branch_tree"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="name" position="after">-->
+<!--                <field name="code"/>-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+
+</odoo>

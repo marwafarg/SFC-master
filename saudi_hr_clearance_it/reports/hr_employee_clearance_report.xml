@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_employee_clearance_template1" inherit_id="saudi_hr_clearance.report_employee_clearance_template">
+        <xpath expr="//div[@name='employee_dept']" position="after">
+            <div class="col mt32" name="it_dept">
+                <table class="table table-striped table-border border-black" style="border-top: solid black;">
+                    <thread>
+                        <tr>
+                            <th>
+                                <h4>
+                                    <center><span><strong>IT Department</strong></span></center>
+                                </h4>
+                            </th>
+                        </tr>
+                        <table class="table table-striped table-border border-black" style="border: 2px solid black;">
+                            <thread>
+                                <tr>
+                                    <th style="border: 2px solid black;"><span>Item</span></th>
+                                    <th style="border: 2px solid black;"><span>Status</span></th>
+                                    <th style="border: 2px solid black;"><span>Handled By</span></th>
+                                    <th style="border: 2px solid black;"><span>Last Update By</span></th>
+                                    <th style="border: 2px solid black;"><span>Last Updated On</span></th>
+                                    <th style="border: 2px solid black;"><span>Remarks</span></th>
+                                </tr>
+                            </thread>
+                            <tbody>
+                                <t t-foreach="o.it_dept_ids" t-as="line">
+                                    <tr>
+                                        <tr>
+                                            <td style="border: 2px solid black;"><span t-field="line.item"/></td>
+                                            <td style="border: 2px solid black;"><span t-field="line.item_state"/></td>
+                                            <td style="border: 2px solid black;"><span t-field="line.handled_by"/></td>
+                                            <td style="border: 2px solid black;"><span t-field="line.write_uid"/></td>
+                                            <td style="border: 2px solid black;"><span t-field="line.write_date" t-options="{'widget': 'date'}"/></td>
+                                            <td style="border: 2px solid black;"><span t-field="line.remarks"/></td>
+                                        </tr>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </thread>
+                </table>
+            </div>
+        </xpath>
+    </template>
+</odoo>

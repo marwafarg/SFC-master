@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="city_sa" model="res.city">
+            <field name="name">Riyadh</field>
+            <field name="country_id" ref="base.sa"/>
+        </record>
+
+        <record id="city_th" model="res.city">
+            <field name="name">Laem Chabang</field>
+            <field name="country_id" ref="base.th"/>
+        </record>
+
+        <record id="city_sz" model="res.city">
+            <field name="name">Geneva</field>
+            <field name="country_id" ref="base.sz"/>
+        </record>
+
+        <record id="city_sg" model="res.city">
+            <field name="name">Bern</field>
+            <field name="country_id" ref="base.sg"/>
+        </record>
+
+        <record id="city_se" model="res.city">
+            <field name="name">Dalarna</field>
+            <field name="country_id" ref="base.se"/>
+        </record>
+
+        <record id="city_airfare_sa" model="city.airfare">
+            <field name="country_id" ref="base.sa"/>
+            <field name="adult_fare">15000</field>
+            <field name="city_id" ref="saudi_hr_air_allowance.city_sa"/>
+        </record>
+
+        <record id="city_airfare_se" model="city.airfare">
+            <field name="country_id" ref="base.se"/>
+            <field name="adult_fare">20000</field>
+            <field name="city_id" ref="saudi_hr_air_allowance.city_se"/>
+        </record>
+
+        <record id="city_airfare_sg" model="city.airfare">
+            <field name="country_id" ref="base.sg"/>
+            <field name="adult_fare">25000</field>
+            <field name="city_id" ref="saudi_hr_air_allowance.city_sg"/>
+        </record>
+
+        <record id="city_airfare_sz" model="city.airfare">
+            <field name="country_id" ref="base.sz"/>
+            <field name="adult_fare">30000</field>
+            <field name="city_id" ref="saudi_hr_air_allowance.city_sz"/>
+        </record>
+
+        <record id="city_airfare_th" model="city.airfare">
+            <field name="country_id" ref="base.th"/>
+            <field name="adult_fare">35000</field>
+            <field name="city_id" ref="saudi_hr_air_allowance.city_th"/>
+        </record>
+
+        <record id="hr_contract.hr_contract_al" model="hr.contract">
+            <field name="air_allowance">True</field>
+            <field name="air_destination" ref="saudi_hr_air_allowance.city_airfare_sa"/>
+        </record>
+
+        <record id="hr_contract.hr_contract_fpi" model="hr.contract">
+            <field name="air_allowance">True</field>
+            <field name="air_destination" ref="saudi_hr_air_allowance.city_airfare_se"/>
+        </record>
+
+        <record id="hr_contract.hr_contract_qdp" model="hr.contract">
+            <field name="air_allowance">True</field>
+            <field name="air_destination" ref="saudi_hr_air_allowance.city_airfare_sg"/>
+        </record>
+
+        <record id="saudi_hr_contract.jep_hr_contract" model="hr.contract">
+            <field name="air_allowance">True</field>
+            <field name="air_destination" ref="saudi_hr_air_allowance.city_airfare_sz"/>
+        </record>
+
+        <record id="hr_contract.hr_contract_stw" model="hr.contract">
+            <field name="air_allowance">True</field>
+            <field name="air_destination" ref="saudi_hr_air_allowance.city_airfare_th"/>
+        </record>
+    </data>
+</odoo>

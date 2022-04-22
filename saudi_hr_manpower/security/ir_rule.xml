@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="saudi_hr_manower_hof" model="ir.rule">
+        <field name="name">Head of Department</field>
+        <field name="model_id" ref="model_manpower_plan"/>
+        <field name="domain_force">['|',('department_id.manager_id.user_id','=',user.id),('department_id','child_of',user.employee_ids and user.employee_ids[0].department_id.ids)]</field>
+        <field name="groups" eval="[(4,ref('saudi_hr.group_hof'))]"/>
+    </record>
+
+    <!-- <record id="saudi_advance_hr_hr_employee_others" model="ir.rule">
+        <field name="name">HR Employee Others</field>
+        <field name="model_id" ref="model_hr_employee"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4,ref('hr.group_hr_user')),(4,ref('saudi_hr.group_gr_officer')),(4,ref('hr.group_hr_manager'))]"/> -->
+<!--     (4,ref('saudi_hr.group_helpdesk_assistant'))(4,ref('saudi_advance_hr.group_finance_officer')),(4,ref('saudi_advance_hr.group_payroll_assistant')),(4,ref('group_talent_acquisition_assistant')) -->
+    <!-- </record> -->
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo noupdate="1">
+    <!-- Cron for Get Attendees Details -->
+<!--    <record model="ir.cron" id="get_attendance_cron">-->
+<!--        <field name="name">Get Attendance</field>-->
+<!--        <field name="model_id" ref="sync_hr_attendance_zkt.model_attendance_zkt_config"/>-->
+<!--        <field name="state">code</field>-->
+<!--        <field name="code">model.get_attendance()</field>-->
+<!--        <field name="interval_number">6</field>-->
+<!--        <field name="interval_type">hours</field>-->
+<!--        <field name="numbercall">-1</field>-->
+<!--        <field name="doall" eval="False"/>-->
+<!--    </record>-->
+</odoo>

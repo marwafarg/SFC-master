@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="sequence_timeoff_installment" model="ir.sequence">
+        <field name="name">Installment Sequence</field>
+        <field name="code">timeoff.installment</field>
+        <field name="prefix">IT/</field>
+        <field eval="1" name="number_next"/>
+        <field eval="1" name="number_increment"/>
+        <field name="padding">5</field>
+    </record>
+
+</odoo>

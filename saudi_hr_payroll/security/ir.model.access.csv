@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_payslip_export_user,access_hr_payslip_export_user,model_hr_payslip_export,base.group_user,1,0,0,0
+access_hr_payslip_export_officer,access_hr_payslip_export_officer,model_hr_payslip_export,hr.group_hr_user,1,1,1,1
+access_hr_payslip_export_line_user,access_hr_payslip_export_line_user,model_hr_payslip_export_line,base.group_user,1,1,1,0
+access_hr_payslip_export_line_officer,access_hr_payslip_export_line_officer,model_hr_payslip_export_line,hr.group_hr_user,1,1,1,1
+access_other_hr_payslip_user,access_other_hr_payslip_user,model_other_hr_payslip,base.group_user,1,0,0,0
+access_other_hr_payslip_officer,access_other_hr_payslip_officer,model_other_hr_payslip,hr.group_hr_user,1,1,1,1

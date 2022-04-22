@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_iqama_emp_rule" model="ir.rule">
+        <field name="name">Employee HR IQAMA</field>
+        <field name="model_id" ref="model_hr_iqama"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">['|', ('message_partner_ids', '=', user.partner_id.id), ('employee_id.user_id','=',user.id)]</field>
+    </record>
+    <record id="hr_iqama_officer_rule" model="ir.rule">
+        <field name="name">HR Officer HR IQAMA</field>
+        <field name="model_id" ref="model_hr_iqama"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('message_partner_ids', 'child_of', [user.partner_id.id]), '|', ('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <!-- HR Iqama Multi Branch Rule  -->
+    <!--<record model="ir.rule" id="hr_iqama_branch_rule_global">
+        <field name="name">HR Iqama multi-branch</field>
+        <field name="model_id" ref="saudi_hr_iqama.model_hr_iqama"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('branch_id', '=', False), ('branch_id', 'in', user.branch_ids.ids)]</field>
+    </record>-->
+</odoo>

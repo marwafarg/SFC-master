@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="employee_clearance_rule_employee" model="ir.rule">
+        <field name="name">Employee Clearance</field>
+        <field name="model_id" ref="model_hr_employee_clearance"/>
+        <field name="domain_force">['|', '|',('employee_id.user_id', '=', user.id),
+            ('employee_id.parent_id.user_id', '=', user.id),
+            ('employee_id.coach_id.user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user')), (4,ref('saudi_hr.group_line_manager')),
+        (4,ref('saudi_hr.group_hof'))]"/>
+    </record>
+
+    <record id="employee_clearance_rule_manager" model="ir.rule">
+        <field name="name">Employee Clearance Manages</field>
+        <field name="model_id" ref="model_hr_employee_clearance"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4,ref('hr.group_hr_user')),(4,ref('hr_admin.group_admin_manager')),
+        (4,ref('account.group_account_manager'))]"/>
+    </record>
+
+    <!-- HR Employee Clearance Multi Branch Rule  -->
+    <!--<record model="ir.rule" id="hr_employee_clearance_branch_rule_global">
+        <field name="name">HR Employee Clearance multi-branch</field>
+        <field name="model_id" ref="saudi_hr_clearance.model_hr_employee_clearance"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('location', '=', False), ('location', 'in', user.branch_ids.ids)]</field>
+    </record>-->
+</odoo>

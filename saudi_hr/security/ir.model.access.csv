@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+hr.access_hr_employee_system_user,hr.employee system user,hr.model_hr_employee,base.group_user,1,0,0,0
+access_hr_employee_hof,access_hr_employee_hof,model_hr_employee,saudi_hr.group_hof,1,1,1,0
+access_education_certificate,access_education_certificate,model_education_certificate,base.group_user,1,0,0,0
+access_education_certificate_manager,access_education_certificate_manager,model_education_certificate,hr.group_hr_manager,1,1,1,1
+access_education_study,access_education_study,model_education_study,base.group_user,1,0,0,0
+access_education_study_manager,access_education_study_manager,model_education_study,hr.group_hr_manager,1,1,1,1
+access_education_school,access_education_school,model_education_school,base.group_user,1,0,0,0
+access_education_school_manager,access_education_school_manager,model_education_school,hr.group_hr_manager,1,1,1,1

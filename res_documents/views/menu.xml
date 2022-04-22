@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_hr_document_type" action="action_res_document_type" parent="hr.menu_human_resources_configuration" sequence="12"/>
+
+    <menuitem id="menu_hr_document" name="Documents" action="action_res_documents" parent="saudi_hr.menu_operation_request" groups="base.group_user"/>
+</odoo>

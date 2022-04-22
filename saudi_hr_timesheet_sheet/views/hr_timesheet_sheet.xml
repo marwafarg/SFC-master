@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_timesheet_sheet_form_inherit" model="ir.ui.view">
+        <field name="name">hr.timesheet.sheet.form.inherit</field>
+        <field name="model">hr_timesheet.sheet</field>
+        <field name="inherit_id" ref="hr_timesheet_sheet.hr_timesheet_sheet_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_timesheet_confirm']" position="before">
+                <button name="compute_timesheet" states="draft" string="Compute Timesheet" type="object" class="oe_highlight"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+               <page string="Attendance">
+                    <group>
+                        <group>
+                            <field name="total_attendance" widget="float_time"/>
+                            <field name="total_difference" widget="float_time"/>
+                        </group>
+                        <group>
+                            <field name="total_overtime" widget="float_time"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="period_ids" nolabel="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="total_attendance" widget="float_time" sum="Total"/>
+                                <field name="total_working_hours" sum="Total"/>
+                                <field name="total_timesheet" widget="float_time" sum="Total Timesheet"/>
+                                <field name="total_overtime" widget="float_time" sum="Total"/>
+                                <field name="total_difference" widget="float_time" sum="Total"/>
+                                <field name="reason"/>
+                            </tree>
+                        </field>
+                    </group>
+               </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

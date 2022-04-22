@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="insurance_premium_multi_invoice_form_view" model="ir.ui.view">
+        <field name="name">insurance.premium.multi.invoice.form.view</field>
+        <field name="model">insurance.premium.multi.invoice</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="start_date"/>
+                    </group>
+                    <group>
+                        <field name="end_date"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Create Invoice" name="create_invoice_button" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window
+        id="insurance_premium_multi_invoice_action"
+        name="Generate Premium Invoice"
+        res_model="insurance.premium.multi.invoice"
+        binding_model="insurance.premium"
+        view_id="insurance_premium_multi_invoice_form_view"
+        groups="account.group_account_invoice"
+        target="new"
+    />
+</odoo>

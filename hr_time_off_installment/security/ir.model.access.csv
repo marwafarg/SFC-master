@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_installment_calculation_method,installment_calculation_method,model_installment_calculation_method,,1,1,1,1
+access_method_line,method_line,model_method_line,,1,0,0,0
+access_timeoff_installment,timeoff_installment,model_timeoff_installment,,1,1,1,1
+access_create_journal_entry,create_journal_entry,model_create_journal_entry,,1,1,1,1

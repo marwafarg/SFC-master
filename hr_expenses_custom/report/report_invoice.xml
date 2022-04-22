@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+        <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+            <xpath expr="//table/thead/tr/th[@name='th_description']" position="before">
+                <th name="th_item" class="text-left"><span>Item</span></th>
+
+            </xpath>
+           <xpath expr="//table/tbody/t/tr/t/td[@name='account_invoice_line_name']" position="before">
+               <td name="item"><span t-field="line.item" t-options="{'widget': 'text'}"/></td>
+
+            </xpath>
+        </template>
+
+</odoo>

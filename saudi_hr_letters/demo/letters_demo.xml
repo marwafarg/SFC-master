@@ -1,0 +1,139 @@
+<?xml version="1.0" ?>
+<odoo>
+<!--    <data noupdate="1">-->
+<!--        <record id="saudi_hr.user_hr_officer" model="res.users">-->
+<!--            <field name="is_authorized">True</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_0" model="multi.reports">-->
+<!--            <field name="report_type">bank_loan</field>-->
+<!--            <field name="employee_id" ref="hr.employee_han"/>-->
+<!--            <field name="description">Bank Loan Transfer.</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_qdp"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_2" model="multi.reports">-->
+<!--            <field name="report_type">bank_loan_female</field>-->
+<!--            <field name="employee_id" ref="hr.employee_stw"/>-->
+<!--            <field name="description">Bank Loan Transfer For Female</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_1" model="multi.reports">-->
+<!--            <field name="report_type">bankopen_account</field>-->
+<!--            <field name="employee_id" ref="hr.employee_jgo"/>-->
+<!--            <field name="description">Open New Account</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_stw"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_3" model="multi.reports">-->
+<!--            <field name="report_type">family_iqama</field>-->
+<!--            <field name="employee_id" ref="hr.employee_jve"/>-->
+<!--            <field name="description">Family Iqama</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_4" model="multi.reports">-->
+<!--            <field name="report_type">walid_school</field>-->
+<!--            <field name="employee_id" ref="hr.employee_jog"/>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="description">Valid School</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_5" model="multi.reports">-->
+<!--            <field name="report_type">house_allowance</field>-->
+<!--            <field name="employee_id" ref="hr.employee_vad"/>-->
+<!--            <field name="description">House Allowance</field>-->
+
+<!--        </record>-->
+
+<!--        <record id="multi_reports_6" model="multi.reports">-->
+<!--            <field name="report_type">stamping_certificate</field>-->
+<!--            <field name="employee_id" ref="hr.employee_lur"/>-->
+<!--            <field name="description">Stamping Certificate</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_7" model="multi.reports">-->
+<!--            <field name="report_type">stamping_certificate</field>-->
+<!--            <field name="employee_id" ref="hr.employee_lur"/>-->
+<!--            <field name="description">Stamping Certificate</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_vad"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_8" model="multi.reports">-->
+<!--            <field name="report_type">bankopen_account_female</field>-->
+<!--            <field name="employee_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="description">Open New Account for female</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_9" model="multi.reports">-->
+<!--            <field name="report_type">certi_approval</field>-->
+<!--            <field name="employee_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="description">Certi Approval</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_jep"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_10" model="multi.reports">-->
+<!--            <field name="report_type">mroor_report</field>-->
+<!--            <field name="employee_id" ref="hr.employee_jep"/>-->
+<!--            <field name="description">Mroor Report</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_11" model="multi.reports">-->
+<!--            <field name="report_type">saudi_hr_letters_whomeconcern</field>-->
+<!--            <field name="employee_id" ref="hr.employee_stw"/>-->
+<!--            <field name="description">To Whom Concern (English)</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_fpi"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_12" model="multi.reports">-->
+<!--            <field name="report_type">towhom_concern</field>-->
+<!--            <field name="employee_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="description">To Whom Concern (Male)</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_13" model="multi.reports">-->
+<!--            <field name="report_type">towhom_concern_female</field>-->
+<!--            <field name="employee_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="description">To Whom Concern (Female)</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_al"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_14" model="multi.reports">-->
+<!--            <field name="report_type">stamping_certificate_female</field>-->
+<!--            <field name="employee_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="description">Stamping Certificate (Female)</field>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_15" model="multi.reports">-->
+<!--            <field name="report_type">wifefrom_home_country</field>-->
+<!--            <field name="employee_id" ref="hr.employee_al"/>-->
+<!--            <field name="description">Wife From  Home Country</field>-->
+<!--            <field name="state">approve</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="manager_id" ref="hr.employee_qdp"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_16" model="multi.reports">-->
+<!--            <field name="report_type">saudibritish_bankloan</field>-->
+<!--            <field name="employee_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="description">Saudi British Bankloan Transfer</field>-->
+<!--            <field name="state">approve</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="manager_id" ref="hr.employee_qdp"/>-->
+<!--        </record>-->
+
+<!--        <record id="multi_reports_17" model="multi.reports">-->
+<!--            <field name="report_type">saudi_hr_letters_transport</field>-->
+<!--            <field name="employee_id" ref="hr.employee_al"/>-->
+<!--            <field name="description">Transport Report</field>-->
+<!--            <field name="state">approve</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="manager_id" ref="hr.employee_qdp"/>-->
+<!--        </record>-->
+<!--    </data>-->
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form view for Generate Attendance Sheet -->
+    <record id="generate_attendance_sheet_form" model="ir.ui.view">
+        <field name="name">generate.attendance.sheet.form</field>
+        <field name="model">generate.attendance.sheet</field>
+        <field name="arch" type="xml">
+            <form string="Generate Attendance Sheet">
+                <group colspan="4">
+                    <separator string="Employees" colspan="4"/>
+                    <newline/>
+                    <field name="employee_ids" nolabel="1"/>
+                </group>
+                <group>
+                    <field name="start_date" invisible="1"/>
+                    <field name="end_date" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="generate_attendance_sheet" type="object" string='Generate' icon="fa-cogs" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_generate_attendance_sheet_view" model="ir.actions.act_window">
+        <field name="name">Generate Attendance Sheet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">generate.attendance.sheet</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="generate_attendance_sheet_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

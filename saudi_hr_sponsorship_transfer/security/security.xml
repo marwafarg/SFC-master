@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_sponsorship_transfer_emp_rule" model="ir.rule">
+        <field name="name">Employee Sponsorship Transfer</field>
+        <field name="model_id" ref="model_hr_sponsorship_transfer"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="domain_force">['|', ('message_partner_ids', '=', user.partner_id.id), ('employee_id.user_id', '=', user.id)]</field>
+    </record>
+    <record id="hr_sponsorship_transfer_officer_rule" model="ir.rule">
+        <field name="name">Officer Sponsorship Transfer</field>
+        <field name="model_id" ref="model_hr_sponsorship_transfer"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('message_partner_ids', 'child_of', [user.partner_id.id]), '|', ('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

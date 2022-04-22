@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="send_payslip_mail_view" model="ir.ui.view">
+        <field name="name">send.payslip.mail.form</field>
+        <field name="model">send.payslip.mail</field>
+        <field name="arch" type="xml">
+            <form>
+                <h2>
+                    Are you sure you want to Send Payslip to Employee?
+                </h2>
+                <footer>
+                    <button name="send_payslip" string="Send" type="object" class="oe_highlight"/>
+                    or
+                    <button  class="oe_link" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_send_payslip_mail_view"
+                name="Send Payslip Mail"
+                res_model="send.payslip.mail"
+                binding_model="hr.payslip"
+                view_mode="form"
+                target="new"
+                />
+</odoo>

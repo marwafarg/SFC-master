@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_loan_form_inherit" model="ir.ui.view">
+        <field name="name">hr.loan.form</field>
+        <field name="model">hr.loan</field>
+        <field name="inherit_id" ref="saudi_hr_loan.view_hr_loan_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='loan_amount']" position="before">
+                <field name="is_opening" attrs="{'readonly':[('state','!=','draft')]}"/>
+                <field name="original_amount" attrs="{'invisible':[('is_opening','=',False)],'readonly':[('state','!=','draft')]}"/>
+                <field name="already_amount" attrs="{'invisible':[('is_opening','=',False)],'readonly':[('state','!=','draft')]}"/>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,425 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saudi_hr_fee_calculator
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-26 06:32+0000\n"
+"PO-Revision-Date: 2018-12-26 06:32+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_needaction
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "April"
+msgstr "أبريل"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_attachment_count
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "August"
+msgstr "أغسطس"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__create_date
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__display_name
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee,state:0
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__done
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__done
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_form
+msgid "Done"
+msgstr "تم"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__down_level_fee
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_filter
+msgid "Down Level Fee"
+msgstr "انخفاض مستوى الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee,state:0
+msgid "Draft"
+msgstr "مشروع"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__total_expats_employee
+msgid "Expats Employees"
+msgstr "المغتربين الموظفين"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model,name:saudi_hr_fee_calculator.model_expats_fee
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__expats_fee_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_line_filter
+msgid "Expats Fee"
+msgstr "رسوم العمالة الوافدة"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.actions.act_window,name:saudi_hr_fee_calculator.action_expats_fee_line
+#: model:ir.model,name:saudi_hr_fee_calculator.model_expats_fee_line
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__expats_fee_line
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_line
+msgid "Expats Fee Line"
+msgstr "خط الرسوم للمغتربين"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.ui.menu,name:saudi_hr_fee_calculator.emp_expats
+msgid "Expats Levy Fee"
+msgstr "العمالة الوافدة ليفي الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.ui.menu,name:saudi_hr_fee_calculator.emp_expats_line
+msgid "Expats Levy Fee Details"
+msgstr "المغتربين ليفي تفاصيل الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "February"
+msgstr "شهر فبراير"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__fee
+msgid "Fee"
+msgstr "رسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.actions.act_window,name:saudi_hr_fee_calculator.action_expats_fee
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_tree
+msgid "Fee Calculator"
+msgstr "حاسبة الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_line_tree
+msgid "Fee Calculator Lines"
+msgstr "رسوم حاسبة الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_form
+msgid "Fee Calcultor"
+msgstr "حاسبة الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_line_filter
+msgid "Filter"
+msgstr "منقي"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_follower_ids
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_channel_ids
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_partner_ids
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: saudi_hr_fee_calculator
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_line_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__id
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__message_unread
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__message_needaction
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__message_has_error
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_is_follower
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "January"
+msgstr "كانون الثاني"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "July"
+msgstr "يوليو"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "June"
+msgstr "يونيو"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee____last_update
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__write_date
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_main_attachment_id
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "March"
+msgstr "مارس"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "May"
+msgstr "مارس"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_has_error
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_ids
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__month
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_line_filter
+msgid "Month"
+msgstr "الشهر"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "November"
+msgstr "شهر نوفمبر"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_needaction_counter
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_has_error_counter
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__message_needaction_counter
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__message_has_error_counter
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__message_unread_counter
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "October"
+msgstr "شهر اكتوبر"
+
+#. module: saudi_hr_fee_calculator
+#: code:addons/saudi_hr_fee_calculator/models/emp_calculator.py:56
+#, python-format
+msgid "Please create some fee details."
+msgstr "يرجى إنشاء بعض تفاصيل الرسوم."
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__ratio
+msgid "Ratio(%)"
+msgstr "نسبة(٪)"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__total_saudi_employee
+msgid "Saudi Employees"
+msgstr "الموظفون السعوديون"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.actions.server,name:saudi_hr_fee_calculator.cron_expats_fee_line_ir_actions_server
+#: model:ir.cron,cron_name:saudi_hr_fee_calculator.cron_expats_fee_line
+#: model:ir.cron,name:saudi_hr_fee_calculator.cron_expats_fee_line
+msgid "Schedular Calculate Expats fee"
+msgstr "حساب جداول المغتربين"
+
+#. module: saudi_hr_fee_calculator
+#: selection:expats.fee.line,month:0
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: saudi_hr_fee_calculator
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.view_expats_fee_form
+msgid "Set to Draft"
+msgstr "تعيين كمسودة"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: saudi_hr_fee_calculator
+#: sql_constraint:expats.fee.line:0
+msgid "The Month must be unique!"
+msgstr "يجب أن يكون الشهر فريدًا!"
+
+#. module: saudi_hr_fee_calculator
+#: sql_constraint:expats.fee:0
+msgid "The Year must be unique!"
+msgstr "السنة يجب أن تكون فريدة!"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__total_employee
+msgid "Total Employees"
+msgstr "عدد الموظفي"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__total_fee
+msgid "Total Fee"
+msgstr "مجموع الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_unread
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__message_unread_counter
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__up_level_fee
+msgid "Up Level Fee"
+msgstr "أعلى مستوى الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_filter
+msgid "Up level Fee"
+msgstr "رفع مستوى الرسوم"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__website_message_ids
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee__website_message_ids
+#: model:ir.model.fields,help:saudi_hr_fee_calculator.field_expats_fee_line__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: saudi_hr_fee_calculator
+#: model:ir.model.fields,field_description:saudi_hr_fee_calculator.field_expats_fee__year
+#: model_terms:ir.ui.view,arch_db:saudi_hr_fee_calculator.expats_fee_filter
+msgid "Year"
+msgstr "عام"
+
+#. module: saudi_hr_fee_calculator
+#: code:addons/saudi_hr_fee_calculator/models/emp_calculator.py:90
+#, python-format
+msgid "You can remove the record which is in Draft or Cancel state"
+msgstr "يمكنك إزالة السجل الموجود في المسودة أو حالة الإلغاء"
+

@@ -1,0 +1,26 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="view_partner_form_inherit01" model="ir.ui.view">
+        <field name="name">res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='vat']" position="after">
+                <field name="is_ecommerce" readonly="1"/>
+                <field name="client_id" readonly="1"/>
+                <field name="client_nation_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter_inherit01" model="ir.ui.view">
+        <field name="name">res.partner</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <filter name="inactive" position="before">
+                <filter string="Ecommerce Clients" name="ecommerce" domain="[('is_ecommerce', '=', True)]"/>
+            </filter>
+        </field>
+    </record>
+</odoo>

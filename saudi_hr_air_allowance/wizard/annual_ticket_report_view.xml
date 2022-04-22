@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="annual_ticket_reports_print_view" model="ir.ui.view">
+        <field name="name">annual.ticket.reports.form</field>
+        <field name="model">annual.ticket.report</field>
+        <field name="arch" type="xml">
+            <form string="Annual ticket Report">
+                <group attrs="{'invisible': [('excel_file', '!=', False)]}">
+                <h2>
+                    Are you sure you want to Generate Annual Tickets Report?
+                </h2>
+                </group>
+                <group attrs="{'invisible': [('excel_file', '=', False)]}">
+                    <field name="excel_file" filename="filename" readonly="1"/>
+                    <field name="filename" invisible="1"/>
+                </group>
+                <footer>
+                    <button name="generate_annual_ticket_excel_report" string="Print" type="object" class="oe_highlight"/>
+                    or
+                    <button  class="oe_link" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="action_report_annual_ticket" model="ir.actions.act_window">
+        <field name="name">Annual Ticket Report</field>
+        <field name="res_model">annual.ticket.report</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="annual_ticket_reports_print_view"/>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="saudi_hr_air_allowance.model_annual_ticket" />
+    </record>
+</odoo>

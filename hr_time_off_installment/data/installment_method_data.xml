@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="installment_method_Basic" model="method.line">
+        <field name="name">Basic</field>
+        <field name="type">Basic</field>
+    </record>
+
+    <record id="installment_method_HouseRentAllowance" model="method.line">
+        <field name="name">House Rent Allowance</field>
+        <field name="type">House_Rent_Allowance</field>
+    </record>
+
+    <record id="installment_method_TransportAllowance" model="method.line">
+        <field name="name">Transport Allowance</field>
+        <field name="type">Transport_Allowance</field>
+    </record>
+
+</odoo>

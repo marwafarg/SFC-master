@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="products_template_branch_form_inherit" model="ir.ui.view">
+        <field name="name">product.template.product.form</field>
+        <field name="model">product.template</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" context="{'company_id': company_id}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="products_branch_form_inherit" model="ir.ui.view">
+        <field name="name">product.product.form</field>
+        <field name="model">product.product</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" context="{'company_id': company_id}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

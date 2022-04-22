@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stock_warehouse_branch_form_inherit" model="ir.ui.view">
+        <field name="name">stock.warehouse.form</field>
+        <field name="model">stock.warehouse</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" options="{'no_create': True}" context="{'company_id': company_id}" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_warehouse_tree_branch_inherit" model="ir.ui.view">
+        <field name="name">stock.warehouse.tree</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse_tree"/>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_warehouse_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">stock.warehouse.search</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.stock_warehouse_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <group expand="0" string="Group By">
+                    <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_location_branch_form_inherit" model="ir.ui.view">
+        <field name="name">stock.location.form</field>
+        <field name="model">stock.location</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <field name="usage" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_location_tree_branch_inherit" model="ir.ui.view">
+        <field name="name">stock.location.tree</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_tree2"/>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_location_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">stock.location.search</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <group expand="0" string="Group By">
+                    <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_picking_branch_view_form_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <field name="origin" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" required="1" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_stock_picking_tree_branch_inherit" model="ir.ui.view">
+        <field name="name">stock.picking.tree</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_picking_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">stock.picking.search</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_stock_quant_tree_branch_inherit">
+        <field name="name">stock.quant.tree</field>
+        <field name="model">stock.quant</field>
+        <field name="inherit_id" ref="stock.view_stock_quant_tree_editable"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_inventory_form_inherit_branch" model="ir.ui.view">
+        <field name="name">stock.inventory.form.inherit.branch</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" options="{'no_create': True}" groups="multi_branches.group_multi_branch" attrs="{'readonly': [('state', 'not in', ['draft'])]}" required="1" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_stock_inventory_tree_branch_inherit">
+        <field name="name">stock.inventory.tree</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_inventory_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">stock.inventory.search</field>
+        <field name="model">stock.inventory</field>
+        <field name="inherit_id" ref="stock.view_inventory_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_stock_rule_form" model="ir.ui.view">
+        <field name="name">stock.rule.form</field>
+        <field name="inherit_id" ref="stock.view_stock_rule_form"/>
+        <field name="model">stock.rule</field>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" options="{'no_create': True}" groups="multi_branches.group_multi_branch" attrs="{'required': [('action', '=', 'push')]}" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_stock_rule_tree_branch_inherit">
+        <field name="name">stock.rule.tree</field>
+        <field name="model">stock.rule</field>
+        <field name="inherit_id" ref="stock.view_stock_rule_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_picking_type_form_inherit">
+        <field name="name">Operation Types</field>
+        <field name="model">stock.picking.type</field>
+        <field name="inherit_id" ref="stock.view_picking_type_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" required="1" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

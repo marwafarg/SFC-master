@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add Employee Zkt -->
+    <record id="add_employee_zkt_form" model="ir.ui.view">
+        <field name="name">add.employee.zkt.form</field>
+        <field name="model">add.employee.zkt</field>
+        <field name="arch" type="xml">
+            <form string="Add Employee Zkt">
+                <group string="Biometric Machine">
+                    <field name="attendance_zkt_config_id" class="oe_inline" required="1" options="{'no_open': True, 'no_create': True}"/>
+                </group>
+                <footer>
+                    <button name="action_create_employee_zkt" type="object" string="Add Employee" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window
+        id="action_add_employee_zkt"
+        name="Add Employee Zkt"
+        res_model="add.employee.zkt"
+        binding_model="hr.employee"
+        binding_views=""
+        view_mode="form"
+        target="new"/>
+</odoo>

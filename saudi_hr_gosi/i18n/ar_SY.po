@@ -1,0 +1,420 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saudi_hr_gosi
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-24 09:49+0000\n"
+"PO-Revision-Date: 2018-12-24 09:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__create_date
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__create_date
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__date
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__birth_date
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__hijri_birth_date
+msgid "Date of Birth(Hijri)"
+msgstr "تاريخ الميلاد (هجري)"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__department_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__display_name
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__display_name
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: saudi_hr_gosi
+#: model:ir.model,name:saudi_hr_gosi.model_hr_employee
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__employee_id
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__employee_id
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__employee_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "Employee Details"
+msgstr "تفاصيل الموظف"
+
+#. module: saudi_hr_gosi
+#: model:ir.actions.act_window,name:saudi_hr_gosi.action_hr_gosi_view
+#: model:ir.model,name:saudi_hr_gosi.model_employee_gosi
+#: model:ir.ui.menu,name:saudi_hr_gosi.menu_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_tree_view
+msgid "Employee GOSI"
+msgstr "التأمينات الاجتماعية موظف"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__gosi_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "GOSI"
+msgstr "التأمينات الاجتماعية"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__amount
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__amount
+msgid "GOSI Amount"
+msgstr "مبلغ التأمين"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_gosi_company_deduction
+msgid "GOSI Company Contribution"
+msgstr "مساهمة شركة التأمينات الاجتماعية"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_gosi_company_bh_deduction
+msgid "GOSI Company Contribution for Bahraini Employee"
+msgstr "التأمينات الاجتماعية مساهمة الشركة للموظفين البحرينيين"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_gosi_company_deduction_non_sa
+msgid "GOSI Company Contribution for Non Saudi Employee"
+msgstr "التأمينات الاجتماعية مساهمة الشركة لغير السعوديين"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_gosi_company_sa_deduction
+msgid "GOSI Company Contribution for Saudi Employee"
+msgstr "التأمينات الاجتماعية مساهمة الشركة للموظف السعودي"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_gosi_emp_deduction_bh
+msgid "GOSI Contribution for Bahraini Employee"
+msgstr "التأمينات الاجتماعية مساهمة لموظف بحريني"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_gosi_emp_deduction_sa
+msgid "GOSI Contribution for Saudi Employee"
+msgstr "التأمينات الاجتماعية مساهمة لموظف بحريني"
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "GOSI Deduction Details"
+msgstr "GOSI خصم التفاصيل"
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "GOSI Details"
+msgstr "تفاصيل GOSI"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hr_employee__gosi_ids
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hr_payslip__gosi_id
+msgid "GOSI NO"
+msgstr "التأمينات الاجتماعية رقم"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__gosi_no
+msgid "GOSI No"
+msgstr "التأمينات الاجتماعية رقم"
+
+#. module: saudi_hr_gosi
+#: sql_constraint:employee.gosi:0
+msgid "GOSI Number is already exists !"
+msgstr "رقم التأمينات الاجتماعية موجود بالفعل!"
+
+#. module: saudi_hr_gosi
+#: model:ir.model,name:saudi_hr_gosi.model_gosi_payslip_line
+msgid "GOSI Payslip Line"
+msgstr "خط قسيمة الدفع التأمينات الاجتماعية"
+
+#. module: saudi_hr_gosi
+#: model:ir.model,name:saudi_hr_gosi.model_hr_payslip_employees
+msgid "Generate payslips for all selected employees"
+msgstr "إنشاء قسائم دفع الرواتب لجميع الموظفين الذين تم تحديدهم"
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_filter
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "HADAF"
+msgstr "الهدف"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_hadaf_deduction
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_hadaf_deduction_child1
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_hadaf_deduction_child2
+msgid "HADAF Contribution"
+msgstr "مساهمة هدف"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__hadaf_line_ids
+msgid "HADAF Lines"
+msgstr "خطوط هداف"
+
+#. module: saudi_hr_gosi
+#: model:ir.model,name:saudi_hr_gosi.model_hadaf_payslip_line
+msgid "HADAF Payslip Line"
+msgstr "هداف خط قسيمة الدفع"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__hadaf_id
+msgid "Hadaf"
+msgstr "الهدف"
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "Hijri Birth Date"
+msgstr "تاريخ الميلاد الهجري"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule,name:saudi_hr_gosi.hr_salary_rule_houserentallowance
+msgid "House Rent Allowance"
+msgstr "بدل سكن"
+
+#. module: saudi_hr_gosi
+#: model:hr.salary.rule.category,name:saudi_hr_gosi.HRA
+msgid "Housing Rent Allowance"
+msgstr "بدل إيجار السكن"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__id
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__id
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hr_payslip__include_gosi
+msgid "Include GOSI in Payslip"
+msgstr "تشمل GOSI في Payslip"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__iqama_no
+msgid "Iqama No"
+msgstr "الإقامة لا"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__issue_date
+msgid "Issue Date"
+msgstr "تاريخ الاصدار"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__job_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_filter
+msgid "Job Position"
+msgstr "المناصب الوظيفية"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi____last_update
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line____last_update
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__write_date
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__write_date
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__country_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_filter
+msgid "Nationality"
+msgstr "جنسية"
+
+#. module: saudi_hr_gosi
+#: selection:employee.gosi,region_type:0
+msgid "Non-Saudi"
+msgstr "غير السعوديين"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__passport_no
+msgid "Passport No"
+msgstr "رقم جواز السفر"
+
+#. module: saudi_hr_gosi
+#: model:ir.model,name:saudi_hr_gosi.model_hr_payslip
+msgid "Pay Slip"
+msgstr "ظرف المرتب"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_gosi_payslip_line__payslip_id
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_hadaf_payslip_line__payslip_id
+msgid "Payslip"
+msgstr "قسيمة الدفع"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__payslip_line_ids
+msgid "Payslip Lines"
+msgstr "مفرادات المرتب"
+
+#. module: saudi_hr_gosi
+#: sql_constraint:employee.gosi:0
+msgid "Same employee record is already exists."
+msgstr "سجل الموظف نفسه موجود بالفعل."
+
+#. module: saudi_hr_gosi
+#: selection:employee.gosi,region_type:0
+msgid "Saudi"
+msgstr "سعودي"
+
+#. module: saudi_hr_gosi
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_form_view
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__region_type
+#: model_terms:ir.ui.view,arch_db:saudi_hr_gosi.hr_gosi_filter
+msgid "Type"
+msgstr "النوع"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,field_description:saudi_hr_gosi.field_employee_gosi__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: saudi_hr_gosi
+#: model:ir.model.fields,help:saudi_hr_gosi.field_employee_gosi__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+

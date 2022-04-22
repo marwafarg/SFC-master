@@ -1,0 +1,896 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saudi_hr_flight_book
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-24 06:46+0000\n"
+"PO-Revision-Date: 2018-12-24 06:46+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saudi_hr_flight_book
+#: selection:admin.reports,report:0
+msgid "Accommodation"
+msgstr "الإقامة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_needaction
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model,name:saudi_hr_flight_book.model_admin_reports
+msgid "Admin Reports"
+msgstr "تقارير المسؤول"
+
+#. module: saudi_hr_flight_book
+#: model:product.product,name:saudi_hr_flight_book.air_flight_ticket
+#: model:product.template,name:saudi_hr_flight_book.air_flight_ticket_product_template
+msgid "Air Flight Ticket"
+msgstr "تذكرة طيران جوية"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__airline
+msgid "Airline"
+msgstr "شركة طيران"
+
+#. module: saudi_hr_flight_book
+#: model:ir.actions.act_window,name:saudi_hr_flight_book.action_airlines
+#: model:ir.model,name:saudi_hr_flight_book.model_airlines
+#: model:ir.ui.menu,name:saudi_hr_flight_book.menu_airlines
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.airline_tree_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.airlines_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_filter
+msgid "Airlines"
+msgstr "الخطوط الجوية"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Airlines Details"
+msgstr ""
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Approved"
+msgstr "وافق"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__approved_date
+msgid "Approved Date"
+msgstr "تاريخ الموافقة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__approved_by
+msgid "Approved by"
+msgstr "تمت الموافقة عليه من قبل"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+msgid "Approved by HOF"
+msgstr "تمت الموافقة عليه من قبل HOF"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_attachment_count
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: saudi_hr_flight_book
+#: model:mail.message.subtype,description:saudi_hr_flight_book.mt_flight_booking_validate
+#: model:mail.message.subtype,name:saudi_hr_flight_book.mt_flight_booking_validate
+msgid "Booking Approved"
+msgstr "الموافقة على الحجز"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:207
+#, python-format
+msgid "Booking Approved."
+msgstr "الموافقة على الحجز."
+
+#. module: saudi_hr_flight_book
+#: model:mail.message.subtype,description:saudi_hr_flight_book.mt_flight_booking_confirm
+#: model:mail.message.subtype,name:saudi_hr_flight_book.mt_flight_booking_confirm
+msgid "Booking Confirmed"
+msgstr "تاكيد الحجز"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:192
+#, python-format
+msgid "Booking Confirmed."
+msgstr "تاكيد الحجز."
+
+#. module: saudi_hr_flight_book
+#: model:mail.message.subtype,description:saudi_hr_flight_book.mt_flight_booking_new
+#: model:mail.message.subtype,name:saudi_hr_flight_book.mt_flight_booking_new
+msgid "Booking Created"
+msgstr "الحجز تم إنشاؤه"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:258
+#, python-format
+msgid "Booking Created."
+msgstr "الحجز تم إنشاؤه."
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:220
+#, python-format
+msgid "Booking In Progress."
+msgstr "الحجز قيد التقدم."
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__booking_lines
+msgid "Booking Lines"
+msgstr "خطوط الحجز"
+
+#. module: saudi_hr_flight_book
+#: model:mail.message.subtype,description:saudi_hr_flight_book.mt_flight_booking_receive
+#: model:mail.message.subtype,name:saudi_hr_flight_book.mt_flight_booking_receive
+msgid "Booking Received"
+msgstr "الحجز المستلم"
+
+#. module: saudi_hr_flight_book
+#: model:mail.message.subtype,description:saudi_hr_flight_book.mt_flight_booking_cancel
+#: model:mail.message.subtype,name:saudi_hr_flight_book.mt_flight_booking_cancel
+msgid "Booking Refused"
+msgstr "رفض الحجز"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:248
+#, python-format
+msgid "Booking Refused."
+msgstr "رفض الحجز."
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__booking_id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__booking_id
+msgid "Booking Request"
+msgstr "طلب الحجز"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,payment_mode:0
+msgid "Both"
+msgstr "على حد سواء"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking.line,flight_class:0
+msgid "Business"
+msgstr "اعمال"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Business Development"
+msgstr "تطوير الاعمال"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__flight_class
+msgid "Class"
+msgstr "صف دراسي"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Client Related"
+msgstr "العميل ذات الصلة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: saudi_hr_flight_book
+#: sql_constraint:airlines:0
+msgid "Code must be unique!"
+msgstr "يجب أن يكون الرمز فريدًا!"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,payment_mode:0
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__company_id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__company_id
+msgid "Company"
+msgstr "شركة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__company_contribution
+msgid "Company Contribution"
+msgstr "مساهمة الشركة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: saudi_hr_flight_book
+#: selection:admin.reports,report:0
+msgid "Copy Center"
+msgstr "مركز نسخ"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__create_date
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__create_date
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__create_date
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__travel_date
+msgid "Date of Journey"
+msgstr "تاريخ الرحلة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__department_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__description
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_filter
+msgid "Destination"
+msgstr "الوجهة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__display_name
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__display_name
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__display_name
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: saudi_hr_flight_book
+#: selection:group.member,type:0
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__employee_id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__employee_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,payment_mode:0
+msgid "Employee (to reimburse)"
+msgstr "الموظف (للتعويض)"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__emp_contribution
+msgid "Employee Contribution"
+msgstr "مساهمة الموظف"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Enter ticket number..."
+msgstr "أدخل رقم التذكرة ..."
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Enter your remarks..."
+msgstr "أدخل ملاحظاتك ..."
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Expense"
+msgstr "المصروفات"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__expense_note
+msgid "Expense Note"
+msgstr "ملاحظة حول النفقات"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__expense_ids
+msgid "Expenses"
+msgstr "نفقات"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Extra Information"
+msgstr "معلومات اضافية"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,ticket_type:0
+#: selection:group.member,type:0
+msgid "Family"
+msgstr "أسرة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_filter
+msgid "Filter"
+msgstr "منقي"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking.line,flight_class:0
+msgid "First"
+msgstr "أول"
+
+#. module: saudi_hr_flight_book
+#: model:ir.actions.act_window,name:saudi_hr_flight_book.action_flight_booking_view
+#: model:ir.actions.act_window,name:saudi_hr_flight_book.portal_user_flight_booking_action
+#: model:ir.model,name:saudi_hr_flight_book.model_flight_booking
+#: model:ir.ui.menu,name:saudi_hr_flight_book.menu_flight_booking
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_tree_view
+msgid "Flight Booking"
+msgstr "حجز رحلة طيران"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model,name:saudi_hr_flight_book.model_flight_booking_line
+msgid "Flight Booking Lines"
+msgstr "خطوط حجز رحلات الطيران"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Flight request"
+msgstr "طلب رحلة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Flight request In process"
+msgstr "طلب رحلة في العملية"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Flight request approved"
+msgstr "طلب رحلة معتمد"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Flight request has been refused"
+msgstr "تم رفض طلب الرحلة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Flight request has been waiting for approval"
+msgstr "طلب رحلة كان في انتظار الموافقة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Flight request receive for confirm"
+msgstr "طلب رحلة لتلقي تأكيد"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_follower_ids
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_channel_ids
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_partner_ids
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Generate Expense"
+msgstr "توليد النفقات"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__destination
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__destination
+msgid "Going To"
+msgstr "الذهاب الى"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,ticket_type:0
+msgid "Group"
+msgstr "مجموعة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_filter
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: saudi_hr_flight_book
+#: model:ir.model,name:saudi_hr_flight_book.model_group_member
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__group_member_ids
+msgid "Group Member"
+msgstr "عضو مجموعة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Group Members"
+msgstr "أعضاء المجموعة"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking.line,flight_class:0
+msgid "Guest"
+msgstr "زائر"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__message_unread
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__message_needaction
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__message_has_error
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "In Progress"
+msgstr "في تَقَدم "
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Internal Meeting"
+msgstr "اجتماع داخلي"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__invoice_amount
+msgid "Invoice Amount"
+msgstr "قيمة الفاتورة"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:235
+#, python-format
+msgid "Invoice Amount should be greater then 0"
+msgstr "يجب أن يكون مبلغ الفاتورة أكبر من صفر"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Invoice Details"
+msgstr "تفاصيل الفاتورة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_is_follower
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__job_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Job Position"
+msgstr "المناصب الوظيفية"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines____last_update
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking____last_update
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line____last_update
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__write_date
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__write_date
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__write_date
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__source
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__source
+msgid "Leaving From"
+msgstr "يغادر من"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_main_attachment_id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_has_error
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_ids
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Month"
+msgstr "الشهر"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_airlines__name
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__seats
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__seats
+msgid "No. of Seats"
+msgstr "عدد المقاعد"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_needaction_counter
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_has_error_counter
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__message_needaction_counter
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__message_has_error_counter
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__message_unread_counter
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__branch_id
+msgid "Office"
+msgstr "مكتب. مقر. مركز"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,type:0
+msgid "One Way"
+msgstr "اتجاه واحد"
+
+#. module: saudi_hr_flight_book
+#: selection:group.member,type:0
+msgid "Other"
+msgstr "آخر"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Others"
+msgstr "الآخرين"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__po_number
+msgid "PO Number"
+msgstr "PO عدد"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__payment_mode
+msgid "Payment By"
+msgstr "الدفع بواسطة"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Personal"
+msgstr "الشخصية"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:189
+#, python-format
+msgid "Please add Group Member Details first !"
+msgstr "الرجاء إضافة تفاصيل عضو المجموعة أولاً!"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:231
+#, python-format
+msgid "Please add Ticket Details first !"
+msgstr "الرجاء إضافة تفاصيل التذكرة أولاً!"
+
+#. module: saudi_hr_flight_book
+#: model:ir.ui.menu,name:saudi_hr_flight_book.portal_operation_parent
+msgid "Portal Operations"
+msgstr "عمليات البوابة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__arrival_date
+msgid "Preferred End Date"
+msgstr "تاريخ الانتهاء المفضل"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__departure_date
+msgid "Preferred Start Date"
+msgstr "تاريخ البدء المفضل"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__reason
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Purpose of Travel"
+msgstr "الغرض من السفر"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Put the description here"
+msgstr "ضع الوصف هنا"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Received"
+msgstr "استلمت"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__remarks
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_admin_reports__report
+msgid "Report"
+msgstr "أبلغ عن"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,type:0
+msgid "Round Trip"
+msgstr "جولة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Select Airlines..."
+msgstr "اختر الخطوط الجوية ..."
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Set as Draft"
+msgstr "تعيين كمسودة"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,ticket_type:0
+msgid "Single"
+msgstr "غير مرتبطة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_filter
+msgid "Source"
+msgstr "المصدر"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "State"
+msgstr "الحالة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_admin_reports__supplier_id
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__supplier_id
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Supplier"
+msgstr "المورد"
+
+#. module: saudi_hr_flight_book
+#: model:ir.actions.act_window,name:saudi_hr_flight_book.action_flight_booking_line
+#: model:ir.ui.menu,name:saudi_hr_flight_book.menu_flight_booking_line
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_tree_view
+msgid "Ticket Details"
+msgstr "تفاصيل التذكرة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_filter
+msgid "Ticket No"
+msgstr "تذكرة رقم"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__ticket_no
+msgid "Ticket Number"
+msgstr "رقم التذكرة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Ticket Type"
+msgstr "نوع التذكرة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__ticket_type
+msgid "Ticket type"
+msgstr "نوع التذكرة"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__expense_total
+msgid "Total Expense"
+msgstr "المصاريف الكلية"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Training"
+msgstr "تدريب"
+
+#. module: saudi_hr_flight_book
+#: selection:admin.reports,report:0
+msgid "Travel"
+msgstr "السفر"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_line_form_view
+msgid "Travel Details"
+msgstr "تفاصيل السفر"
+
+#. module: saudi_hr_flight_book
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_form_view
+msgid "Travel Information"
+msgstr "معلومات السفر"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__type
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_group_member__type
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Type"
+msgstr "النوع"
+
+#. module: saudi_hr_flight_book
+#: model:product.product,uom_name:saudi_hr_flight_book.air_flight_ticket
+#: model:product.template,uom_name:saudi_hr_flight_book.air_flight_ticket_product_template
+msgid "Unit(s)"
+msgstr "وحدة(ات)"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_unread
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__message_unread_counter
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,reason:0
+msgid "Visa Related"
+msgstr "التأشيرة ذات الصلة"
+
+#. module: saudi_hr_flight_book
+#: selection:group.member,type:0
+msgid "Visitor"
+msgstr "زائر"
+
+#. module: saudi_hr_flight_book
+#: selection:flight.booking,state:0
+#: model_terms:ir.ui.view,arch_db:saudi_hr_flight_book.flight_booking_filter
+msgid "Waiting Approval"
+msgstr "في انتظار الموافقة"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking__website_message_ids
+#: model:ir.model.fields,field_description:saudi_hr_flight_book.field_flight_booking_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: saudi_hr_flight_book
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking__website_message_ids
+#: model:ir.model.fields,help:saudi_hr_flight_book.field_flight_booking_line__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:326
+#, python-format
+msgid "You can't set details for the Booking which is not in 'In Progress' state!"
+msgstr "لا يمكنك تحديد تفاصيل الحجز التي ليست في حالة \"قيد التقدم\"!"
+
+#. module: saudi_hr_flight_book
+#: code:addons/saudi_hr_flight_book/models/flight.py:122
+#, python-format
+msgid "You cannot remove the record which is not in draft state!"
+msgstr "لا يمكنك إزالة السجل الذي ليس في حالة المسودة!"
+
+#. module: saudi_hr_flight_book
+#: model:product.product,weight_uom_name:saudi_hr_flight_book.air_flight_ticket
+#: model:product.template,weight_uom_name:saudi_hr_flight_book.air_flight_ticket_product_template
+msgid "kg"
+msgstr "كجم"
+

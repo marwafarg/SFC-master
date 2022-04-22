@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_expense_payment_form" model="ir.ui.view">
+        <field name="name">hr.expense.payment.form</field>
+        <field name="model">hr.expense.payment</field>
+        <field name="arch" type="xml">
+            <form string="Expense">
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_year_year_form" model="ir.ui.view">
+        <field name="name">year.year.form</field>
+        <field name="model">year.year</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_recruitment_employee_skill_form" model="ir.ui.view">
+        <field name="name">hr.recruitment.employee.skill.form</field>
+        <field name="model">hr.recruitment.employee.skill</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_issue_warning_form" model="ir.ui.view">
+        <field name="name">issue.warning.form</field>
+        <field name="model">issue.warning</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_warning_type_form" model="ir.ui.view">
+        <field name="name">warning.type.form</field>
+        <field name="model">warning.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_res_document_type_form" model="ir.ui.view">
+        <field name="name">res.document.type.form</field>
+        <field name="model">res.document.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_education_certificate_form" model="ir.ui.view">
+        <field name="name">education.certificate.form</field>
+        <field name="model">education.certificate</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_report_saudi_hr_report_new_joining_employee_form" model="ir.ui.view">
+        <field name="name">report.saudi_hr.report_new_joining_employee.form</field>
+        <field name="model">report.saudi_hr.report_new_joining_employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_facility_form" model="ir.ui.view">
+        <field name="name">facility.form</field>
+        <field name="model">facility</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_villa_form" model="ir.ui.view">
+        <field name="name">villa.form</field>
+        <field name="model">villa</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_res_city_form" model="ir.ui.view">
+        <field name="name">res.city.form</field>
+        <field name="model">res.city</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_annual_ticket_form" model="ir.ui.view">
+        <field name="name">annual.ticket.form</field>
+        <field name="model">annual.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_annual_ticket_employees_form" model="ir.ui.view">
+        <field name="name">annual.ticket.employees.form</field>
+        <field name="model">annual.ticket.employees</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_leaves_details_form" model="ir.ui.view">
+        <field name="name">leaves.details.form</field>
+        <field name="model">leaves.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_leave_encashment_details_form" model="ir.ui.view">
+        <field name="name">leave.encashment.details.form</field>
+        <field name="model">leave.encashment.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_bonus_lines_form" model="ir.ui.view">
+        <field name="name">employee.bonus.lines.form</field>
+        <field name="model">employee.bonus.lines</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_card_form" model="ir.ui.view">
+        <field name="name">hr.employee.card.form</field>
+        <field name="model">hr.employee.card</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_career_development_lines_form" model="ir.ui.view">
+        <field name="name">hr.career.development.lines.form</field>
+        <field name="model">hr.career.development.lines</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_clearance_department_form" model="ir.ui.view">
+        <field name="name">clearance.department.form</field>
+        <field name="model">clearance.department</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_transfer_employee_form" model="ir.ui.view">
+        <field name="name">transfer.employee.form</field>
+        <field name="model">transfer.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_product_line_form" model="ir.ui.view">
+        <field name="name">product.line.form</field>
+        <field name="model">product.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_employee_dependent_form" model="ir.ui.view">
+        <field name="name">employee.dependent.form</field>
+        <field name="model">employee.dependent</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_eos_details_form" model="ir.ui.view">
+        <field name="name">eos.details.form</field>
+        <field name="model">eos.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_expats_fee_form" model="ir.ui.view">
+        <field name="name">expats.fee.form</field>
+        <field name="model">expats.fee</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_group_member_form" model="ir.ui.view">
+        <field name="name">group.member.form</field>
+        <field name="model">group.member</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hadaf_payslip_line_form" model="ir.ui.view">
+        <field name="name">hadaf.payslip.line.form</field>
+        <field name="model">hadaf.payslip.line</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_gr_operations_form" model="ir.ui.view">
+        <field name="name">gr.operations.form</field>
+        <field name="model">gr.operations</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_grade_form" model="ir.ui.view">
+        <field name="name">hr.grade.form</field>
+        <field name="model">hr.grade</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_groups_configuration_form" model="ir.ui.view">
+        <field name="name">hr.groups.configuration.form</field>
+        <field name="model">hr.groups.configuration</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_emp_health_info_form" model="ir.ui.view">
+        <field name="name">emp.health.info.form</field>
+        <field name="model">emp.health.info</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_iqama_form" model="ir.ui.view">
+        <field name="name">hr.iqama.form</field>
+        <field name="model">hr.iqama</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_maintenance_equipment_request_form" model="ir.ui.view">
+        <field name="name">maintenance.equipment.request.form</field>
+        <field name="model">maintenance.equipment.request</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_job_requisition_form" model="ir.ui.view">
+        <field name="name">hr.job.requisition.form</field>
+        <field name="model">hr.job.requisition</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_leave_detail_form" model="ir.ui.view">
+        <field name="name">leave.detail.form</field>
+        <field name="model">leave.detail</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_leaving_form" model="ir.ui.view">
+        <field name="name">hr.employee.leaving.form</field>
+        <field name="model">hr.employee.leaving</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_multi_reports_form" model="ir.ui.view">
+        <field name="name">multi.reports.form</field>
+        <field name="model">multi.reports</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_loan_form" model="ir.ui.view">
+        <field name="name">hr.loan.form</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_manpower_plan_form" model="ir.ui.view">
+        <field name="name">manpower.plan.form</field>
+        <field name="model">manpower.plan</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_insurance_details_form" model="ir.ui.view">
+        <field name="name">insurance.details.form</field>
+        <field name="model">insurance.details</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_analytic_overtime_form" model="ir.ui.view">
+        <field name="name">analytic.overtime.form</field>
+        <field name="model">analytic.overtime</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_emp_passport_register_form" model="ir.ui.view">
+        <field name="name">emp.passport.register.form</field>
+        <field name="model">emp.passport.register</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_payslip_export_form" model="ir.ui.view">
+        <field name="name">hr.payslip.export.form</field>
+        <field name="model">hr.payslip.export</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_emp_probation_review_form" model="ir.ui.view">
+        <field name="name">emp.probation.review.form</field>
+        <field name="model">emp.probation.review</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_survey_feedback_form" model="ir.ui.view">
+        <field name="name">hr.survey.feedback.form</field>
+        <field name="model">hr.survey.feedback</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_sponsorship_transfer_form" model="ir.ui.view">
+        <field name="name">hr.sponsorship.transfer.form</field>
+        <field name="model">hr.sponsorship.transfer</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_vacation_form" model="ir.ui.view">
+        <field name="name">hr.vacation.form</field>
+        <field name="model">hr.vacation</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_visa_form" model="ir.ui.view">
+        <field name="name">hr.visa.form</field>
+        <field name="model">hr.visa</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_employee_rec_visa_form" model="ir.ui.view">
+        <field name="name">hr.employee.rec.visa.form</field>
+        <field name="model">hr.employee.rec.visa</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_advance_salary_form" model="ir.ui.view">
+        <field name="name">hr.advance.salary.form</field>
+        <field name="model">hr.advance.salary</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_attendance_policy_form" model="ir.ui.view">
+        <field name="name">attendance.policy.form</field>
+        <field name="model">attendance.policy</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_attendance_zkt_config_form" model="ir.ui.view">
+        <field name="name">attendance.zkt.config.form</field>
+        <field name="model">attendance.zkt.config</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name" />
+            </form>
+        </field>
+    </record>
+
+</odoo>

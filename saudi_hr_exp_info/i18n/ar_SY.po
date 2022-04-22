@@ -1,0 +1,456 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* saudi_hr_exp_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-24 06:49+0000\n"
+"PO-Revision-Date: 2018-12-24 06:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: saudi_hr_exp_info
+#: model:mail.template,body_html:saudi_hr_exp_info.email_template_employment_reference
+msgid "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>Hello ${object.contact_name},</p>\n"
+"\n"
+"    <p>I am ${object.env.user.name} from ${object.env.user.company_id.name} Pvt.Ltd. This is with regard to referral check of ${object.employee_id.name or ''}, who worked with you as ${object.job_title}. Can you please let me know the following details about him/her:</p>\n"
+"    <ul>\n"
+"        <li>Period of Employment:</li>\n"
+"        <li>Designation:</li>\n"
+"        <li>Reason for leaving the organization:</li>\n"
+"        <li>Exit formalities:Completed / Uncompleted</li>\n"
+"        <li>Verified By:</li>\n"
+"    </ul>\n"
+"    <p>It would be very kind if you could spare a few minutes and provide your feedback.</p>\n"
+"    <p>Your cooperation and quick response by return e-mail would be highly appreciated.</p>\n"
+"    <p>Thanks & Regards,</p>\n"
+"    HR Manager\n"
+"</div>\n"
+""
+msgstr "\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"    <p>مرحبا ${object.contact_name},</p>\n"
+"\n"
+"    <p>أنا $ {object.env.user.name} من $ {object.env.user.company_id.name} Pvt.Ltd. هذا يتعلق بالتحقق من الإحالة $ {object.employee_id.name or ''} ، الذين عملوا معك كـ $ {object.job_title}. هل يمكن أن تسمحوا لي بمعرفة التفاصيل التالية عنه / ها:</p>\n"
+"    <ul>\n"
+"        <li>فترة العمل:</li>\n"
+"        <li>تعيين:</li>\n"
+"        <li>سبب مغادرة المنظمة:</li>\n"
+"        <li>إجراءات الخروج: اكتمل / غير مكتمل</li>\n"
+"        <li>أكد عن طريق:</li>\n"
+"    </ul>\n"
+"    <p>سيكون من اللطيف جدا إذا أمكنك توفير بضع دقائق وتقديم ملاحظاتك.</p>\n"
+"    <p>سيكون تعاونك وردك السريع عن طريق البريد الإلكتروني المرتقب محل تقدير كبير.</p>\n"
+"    <p>مع الشكر و التقدير،</p> ن مدير الموارد البشرية  n</div> ن"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__activities
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Activities and Societies"
+msgstr "نشاطات ومجتمعات"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Approve"
+msgstr "موافقه"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.experience,state:0
+msgid "Approved"
+msgstr "وافق"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "April"
+msgstr "أبريل"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "August"
+msgstr "أغسطس"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Certificates"
+msgstr "شهادات"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Certification"
+msgstr "شهادة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__name
+msgid "Certification Name"
+msgstr "اسم الشهادة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_employee__certification_ids
+msgid "Certifications"
+msgstr "الشهادات"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__company_id
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__company_id
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__company
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.qualification,program_type:0
+msgid "Completed"
+msgstr "الانتهاء"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__contact_email
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__contact_email
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__contact_email
+msgid "Contact Email"
+msgstr "تواصل بالبريد الاكتروني"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__contact_name
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__contact_name
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__contact_name
+msgid "Contact Name"
+msgstr "اسم الاتصال"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__contact_phone
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__contact_phone
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__contact_phone
+msgid "Contact Phone No"
+msgstr "رقم هاتف الاتصال"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__contact_title
+msgid "Contact Title"
+msgstr "عنوان الاتصال"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__create_uid
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__create_date
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__create_date
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__is_current_job
+msgid "Current Job"
+msgstr "العمل الحالي"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__expiry_date
+msgid "Date of Expiry"
+msgstr "تاريخ انتهاء الصلاحية"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__issue_date
+msgid "Date of Issue"
+msgstr "تاريخ المسألة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__attended_date_from
+msgid "Dates Attended(from)"
+msgstr "التواريخ التي تم حضورها (من)"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__attended_date_to
+msgid "Dates Attended(to)"
+msgstr "التواريخ التي تمت زيارتها (إلى)"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "December"
+msgstr "ديسمبر"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__description
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__description
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__display_name
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__display_name
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.experience,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Education and Experience"
+msgstr "التعليم و الخبرة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model,name:saudi_hr_exp_info.model_hr_employee
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__employee_id
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__employee_id
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: saudi_hr_exp_info
+#: model:mail.template,report_name:saudi_hr_exp_info.email_template_employment_reference
+#: model:mail.template,subject:saudi_hr_exp_info.email_template_employment_reference
+msgid "Employment Reference Check"
+msgstr "التحقق من التوظيف المرجعي"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Experience"
+msgstr "تجربة"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "February"
+msgstr "شهر فبراير"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__field_of_study
+msgid "Field of Study"
+msgstr "مجال الدراسة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__grade
+msgid "Grade(GPA)"
+msgstr "الصف / GPA)"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model,name:saudi_hr_exp_info.model_hr_certification
+msgid "HR Certification"
+msgstr "شهادة الموارد البشرية"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model,name:saudi_hr_exp_info.model_hr_experience
+msgid "HR Experience"
+msgstr "تجربة الموارد البشرية"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model,name:saudi_hr_exp_info.model_hr_qualification
+msgid "HR Qualification"
+msgstr "تأهيل الموارد البشرية"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__id
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__id
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__organization_name
+msgid "Issuing Organization"
+msgstr "جهة إصدار"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "January"
+msgstr "كانون الثاني"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__job_title
+msgid "Job Title"
+msgstr "المسمى الوظيفي"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "July"
+msgstr "يوليو"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "June"
+msgstr "يونيو"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification____last_update
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience____last_update
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__write_uid
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__write_date
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__write_date
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__location
+msgid "Location"
+msgstr "المكان"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "March"
+msgstr "مارس"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "May"
+msgstr "قد"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__certification_month
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__completion_month
+msgid "Month"
+msgstr "شهر"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.experience,is_current_job:0
+msgid "No"
+msgstr "لا"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "November"
+msgstr "شهر نوفمبر"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "October"
+msgstr "شهر اكتوبر"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.qualification,program_type:0
+msgid "Ongoing"
+msgstr "جارية"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_employee__experience_ids
+msgid "Previous Experience"
+msgstr "خبرة سابقة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__degree_id
+msgid "Program"
+msgstr "برنامج"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__program_type
+msgid "Program Status"
+msgstr "حالة البرنامج"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Qualification"
+msgstr "المؤهل"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_employee__qualification_ids
+msgid "Qualifications"
+msgstr "مؤهلات"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.experience,state:0
+msgid "Refused"
+msgstr "رفض"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__reg_no
+msgid "Registration No."
+msgstr "رقم التسجيل."
+
+#. module: saudi_hr_exp_info
+#: model_terms:ir.ui.view,arch_db:saudi_hr_exp_info.hr_exp_info_view_employee_form
+msgid "Send Email"
+msgstr "ارسل بريد الكتروني"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.certification,certification_month:0
+#: selection:hr.qualification,completion_month:0
+msgid "September"
+msgstr "سبتمبر"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__time_period_from
+msgid "Time Period(from)"
+msgstr "الفترة الزمنية (من)"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_experience__time_period_to
+msgid "Time Period(to)"
+msgstr "الفترة الزمنية (إلى)"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__university_id
+msgid "University Name"
+msgstr "اسم الجامعة"
+
+#. module: saudi_hr_exp_info
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_certification__certification_year
+#: model:ir.model.fields,field_description:saudi_hr_exp_info.field_hr_qualification__completion_year
+msgid "Year"
+msgstr "عام"
+
+#. module: saudi_hr_exp_info
+#: selection:hr.experience,is_current_job:0
+msgid "Yes"
+msgstr "نعم"
+

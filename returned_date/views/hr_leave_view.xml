@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="hr_leave_view_returned_date_form_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.form</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                    <field name="is_return" invisible="1"/>
+                    <field name="returned_date" attrs="{'readonly':[('returned_date','!=',False)],'invisible':['|',('is_return','=',False),('state','!=','validate')]}" force_save="1"/>
+                    <field name="difference" attrs="{'invisible':['|',('is_return','=',False),('state','!=','validate')]}"/>
+
+            </xpath>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="holiday_status_form_inherit">
+        <field name="name">hr.leave.type.form</field>
+        <field name="model">hr.leave.type</field>
+        <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='request_unit']" position="before">
+                <field name="minimum_days"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="hr_employee_clearance_form_view2" model="ir.ui.view">
+        <field name="name">hr.employee.clearance.forms</field>
+        <field name="model">hr.employee.clearance</field>
+        <field name="inherit_id" ref="saudi_hr_clearance.hr_employee_clearance_form_view1"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='clearance_confirm']" position="attributes">
+                <attribute name="attrs">{'invisible':[('state','in', ['confirm', 'emp_dept', 'it_dept', 'finance_dept', 'admin_dept', 'done', 'refuse'])]}</attribute>
+            </xpath>
+            <button name="generate_eos" position="before">
+                <button name="clearance_next" string="Next" states="it_dept" type="object" class="oe_highlight" groups="hr_admin.group_admin_manager,hr.group_hr_user"/>
+            </button>
+            <xpath expr="//group[@name='emp_dept']" position="after">
+                <group string="IT Department" name="it_dept" col="4" attrs="{'invisible':[('state', '!=' , 'emp_dept')]}">
+                    <field name="it_dept_ids" nolabel="1" attrs="{'readonly':[('state', '=', 'done')]}">
+                        <tree editable="bottom">
+                            <field name="item"/>
+                            <field name="item_state"/>
+                            <field name="handled_by"/>
+                            <field name="write_uid"/>
+                            <field name="write_date"/>
+                            <field name="remarks"/>
+                        </tree>
+                    </field>
+                </group>
+            </xpath>
+            <xpath expr="//group[@name='fin_dept']" position="attributes">
+                <attribute name="attrs">{'invisible':[('state', '!=', 'it_dept')]}</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

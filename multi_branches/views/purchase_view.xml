@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="purchase_order__branch_form_inherit" model="ir.ui.view">
+        <field name="name">purchase.order.form</field>
+        <field name="model">purchase.order</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" options="{'no_create': True}" groups="multi_branches.group_multi_branch" attrs="{'readonly': [('state', 'in', ['done', 'cancel', 'purchase'])]}" context="{'company_id': company_id}" required="1"/>
+            </field>
+            <field name="picking_type_id" position="attributes">
+                <attribute name="context">{'branch_id': branch_id}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_tree_inherit_branch" model="ir.ui.view">
+        <field name="name">purchase.order.tree</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">purchase.order.search</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.view_purchase_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+     <record id="view_purchase_tree_inherit_branch" model="ir.ui.view">
+        <field name="name">purchase.order.view.tree</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_purchase_order_view_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">purchase.order.view.search</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

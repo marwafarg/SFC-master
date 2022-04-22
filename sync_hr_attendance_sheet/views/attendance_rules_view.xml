@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree view of Attendance Rules -->
+    <record model="ir.ui.view" id="view_attendance_rules_tree">
+        <field name="name">attendance.rules.tree</field>
+        <field name="model">attendance.rules</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Rules">
+                <field name="name"/>
+                <field name="rule_type"/>
+                <field name="rate"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view of Attendance Rules -->
+    <record model="ir.ui.view" id="view_attendance_rules_from">
+        <field name="name">attendance.rules.from</field>
+        <field name="model">attendance.rules</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Rules">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="rule_type"/>
+                        </group>
+                        <group>
+                            <field name="apply_after" widget="float_time" required="1"/>
+                            <field name="rate" required="1"/>
+                            <field name="attendance_policy_id" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action of Attendance Rules -->
+    <record model="ir.actions.act_window" id="action_attendance_rules">
+        <field name="name">Attendance Rules</field>
+        <field name="res_model">attendance.rules</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Attendance Rules
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_hr_attendance_settings" action="hr_attendance.action_hr_attendance_settings" name="Settings" parent="hr_attendance.menu_hr_attendance_settings" sequence="1"/>
+
+    <!-- <menuitem id="menu_attendance_rules" action="action_attendance_rules" name="Attendance Rules" parent="hr_attendance.menu_hr_attendance_settings" sequence="2"/> -->
+</odoo>

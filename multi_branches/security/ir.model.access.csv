@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_branch_base,access.res.branch.base,model_res_branch,base.group_user,1,0,0,0
+access_res_branch,access.res.branch,model_res_branch,group_branch_user,1,1,0,0
+access_res_branch_group_erp_manager,access.res.branch,model_res_branch,group_branch_manager,1,1,1,1
+access_account_payment_method_branch,access.account.payment.method.branch,account.model_account_payment_method,base.group_user,1,1,1,0
+access_account.payment_branch,access.account.payment.branch,account.model_account_payment,base.group_user,1,1,1,0
+action_res_branch_location_rule,res.branch.user.location,stock.model_stock_location,multi_branches.group_branch_user,1,1,1,1
+action_res_branch_location_rule_manager,res.branch.user.location,stock.model_stock_location,multi_branches.group_branch_manager,1,1,1,1
+access_stock_valuation_layer_account,access_stock_valuation_layer_account,stock_account.model_stock_valuation_layer,group_branch_user,1,1,0,0
+access_account_journal_branch,access.account.journal.branch,account.model_account_journal,base.group_user,1,1,1,0

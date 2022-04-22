@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_equipment_request_view_form_inherit" model="ir.ui.view">
+        <field name="name">equipment.request.form</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+            <field name="maintenance_team_id" position="attributes">
+                <attribute name="context">{'branch_id':branch_id}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_tree_inherit" model="ir.ui.view">
+        <field name="name">equipment.request.tree</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_request_view_search_inherit" model="ir.ui.view">
+        <field name="name">equipment.request.search</field>
+        <field name="model">maintenance.request</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_request_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="stages" position="after">
+                <filter string='Office' name="branch_id" domain="[]" context="{'group_by' : 'branch_id'}" groups="multi_branches.group_multi_branch"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_form_inherit" model="ir.ui.view">
+        <field name="name">equipment.form</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+            <field name="maintenance_team_id" position="attributes">
+                <attribute name="context">{'default_company_id':company_id, 'default_branch_id': branch_id, 'branch_id':branch_id}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_tree_inherit" model="ir.ui.view">
+        <field name="name">equipment.tree</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_equipment_view_search_inherit" model="ir.ui.view">
+        <field name="name">equipment.search</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="vendor" position="after">
+                <filter string='Office' name="branch_id" domain="[]" context="{'group_by' : 'branch_id'}" groups="multi_branches.group_multi_branch"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="maintenance_team_view_form_inherit" model="ir.ui.view">
+        <field name="name">maintenance.team.form</field>
+        <field name="model">maintenance.team</field>
+        <field name="inherit_id" ref="maintenance.maintenance_team_view_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="maintenance_team_view_tree_inherit" model="ir.ui.view">
+        <field name="name">maintenance.team.tree</field>
+        <field name="model">maintenance.team</field>
+        <field name="inherit_id" ref="maintenance.maintenance_team_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<menuitem id="emp_expats" name="Expats Levy Fee" parent="saudi_hr.menu_operation_request" action="action_expats_fee" groups="saudi_hr.group_gr_manager"/>
+	<menuitem id="emp_expats_line" name="Expats Levy Fee Details" parent="saudi_hr.menu_operation_request" action="action_expats_fee_line" groups="saudi_hr.group_gr_manager"/>
+</odoo>

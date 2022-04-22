@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="fpi_sponsorship_transfer" model="hr.sponsorship.transfer">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="handled_by" ref="hr.employee_al"/>
+            <field name="description">Abdul for sponsorship</field>
+        </record>
+
+        <record id="al_sponsorship_transfer" model="hr.sponsorship.transfer">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="handled_by"  ref="hr.employee_fpi"/>
+            <field name="description">Rahul for sponsorship</field>
+        </record>
+
+        <record id="qdp_sponsorship_transfer" model="hr.sponsorship.transfer">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="handled_by" ref="hr.employee_jep"/>
+            <field name="description">Bilal for sponsorship</field>
+        </record>
+
+        <record id="jep_sponsorship_transfer" model="hr.sponsorship.transfer">
+            <field name="employee_id" ref="hr.employee_jep"/>
+            <field name="handled_by" ref="hr.employee_qdp"/>
+            <field name="description">Danial for sponsorship</field>
+        </record>
+
+        <record id="stw_sponsorship_transfer" model="hr.sponsorship.transfer">
+            <field name="employee_id" ref="hr.employee_stw"/>
+            <field name="handled_by" ref="hr.employee_jep"/>
+            <field name="description">Fareeda for sponsorship</field>
+        </record>
+    </data>
+</odoo>

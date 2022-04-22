@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Multi Company Rule for HR Attendance Sheet -->
+    <record id="attendance_sheet_comp_rule" model="ir.rule">
+        <field name="name">HR Attendance Sheet multi-company</field>
+        <field name="model_id" ref="sync_hr_attendance_sheet.model_attendance_sheet"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

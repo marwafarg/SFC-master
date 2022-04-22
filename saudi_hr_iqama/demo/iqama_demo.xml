@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <data noupdate="1">-->
+<!--        <record id="employee_letter_jog" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_mit"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="birthdate">1986-06-07</field>-->
+<!--            <field name="name">Husaam Udeen</field>-->
+<!--         </record>-->
+
+<!--        <record id="employee_letter_lur_dependent" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_han"/>-->
+<!--            <field name="request_type">family</field>-->
+<!--            <field name="state">validate</field>-->
+<!--            <field name="birthdate">1985-05-06</field>-->
+<!--            <field name="nationality" ref="base.sa"/>-->
+<!--            <field name="name">Asba Akram</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_admin"/>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_jve" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_jth"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="state">inprogress</field>-->
+<!--            <field name="birthdate">1985-07-03</field>-->
+<!--            <field name="name">Zaheena Sheikh</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_admin"/>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_jod" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_jod"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="state">received</field>-->
+<!--            <field name="birthdate">1985-07-03</field>-->
+<!--            <field name="name">Usaamah somani</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_admin"/>-->
+<!--            <field name="iqama_no">2546825135</field>-->
+<!--            <field name="issue_date">2014-01-01</field>-->
+<!--            <field name="expiry_date">2015-12-31</field>-->
+<!--            <field name="hijri_expiry_date">Thursday 20 Raby` al-awal 1437 A.H</field>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_chs" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_al"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="state">draft</field>-->
+<!--            <field name="birthdate">1991-11-11</field>-->
+<!--            <field name="name">Rahul Khanna</field>-->
+<!--            <field name="nationality" ref="base.in"/>-->
+<!--            <field name="arabic_name">راهول</field>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_fpi" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="state">confirm</field>-->
+<!--            <field name="birthdate">1991-07-11</field>-->
+<!--            <field name="name">Abdul Omar</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_jod"/>-->
+<!--            <field name="nationality" ref="base.sa"/>-->
+<!--            <field name="arabic_name">بلال</field>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_dqp" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_qdp"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="nationality" ref="base.sa"/>-->
+<!--            <field name="arabic_name">بلال</field>-->
+<!--            <field name="state">inprogress</field>-->
+<!--            <field name="birthdate">1991-07-11</field>-->
+<!--            <field name="name">Bilal Ali</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="iqama_no">2272323137</field>-->
+<!--            <field name="serial_number">2172323137</field>-->
+<!--            <field name="issue_date" eval="(DateTime.today())"/>-->
+<!--            <field name="expiry_date" eval="(DateTime.today() + relativedelta(years=2))"/>-->
+<!--            <field name="arrival_date" eval="(DateTime.today() - relativedelta(days=3))"/>-->
+<!--            <field name="current_status">True</field>-->
+<!--            <field name="iqama_position">Administration Coordinator</field>-->
+<!--            <field name="place_of_issue">Riyadh</field>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_jep" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_jep"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="nationality" ref="base.us"/>-->
+<!--            <field name="arabic_name">دانيال</field>-->
+<!--            <field name="state">inprogress</field>-->
+<!--            <field name="birthdate">1991-07-11</field>-->
+<!--            <field name="name">Danial Juned</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="iqama_no">2372323137</field>-->
+<!--            <field name="serial_number">2172323137</field>-->
+<!--            <field name="issue_date" eval="(DateTime.today())"/>-->
+<!--            <field name="expiry_date" eval="(DateTime.today() + relativedelta(years=2))"/>-->
+<!--            <field name="arrival_date" eval="(DateTime.today() - relativedelta(days=3))"/>-->
+<!--            <field name="current_status">True</field>-->
+<!--            <field name="iqama_position">Accountant / Accounts Verifier / Auditor</field>-->
+<!--            <field name="place_of_issue">Jeddah</field>-->
+<!--        </record>-->
+
+<!--        <record id="employee_letter_stw" model="hr.iqama">-->
+<!--            <field name="employee_id" ref="hr.employee_stw"/>-->
+<!--            <field name="request_type">employee</field>-->
+<!--            <field name="nationality" ref="base.sa"/>-->
+<!--            <field name="arabic_name">فريدة</field>-->
+<!--            <field name="state">inprogress</field>-->
+<!--            <field name="birthdate">1993-08-11</field>-->
+<!--            <field name="name">Fareeda Hanif</field>-->
+<!--            <field name="handled_by_id" ref="hr.employee_fpi"/>-->
+<!--            <field name="iqama_no">2472323337</field>-->
+<!--            <field name="serial_number">2172323177</field>-->
+<!--            <field name="issue_date" eval="(DateTime.today())"/>-->
+<!--            <field name="expiry_date" eval="(DateTime.today() + relativedelta(years=3))"/>-->
+<!--            <field name="arrival_date" eval="(DateTime.today() - relativedelta(days=4))"/>-->
+<!--            <field name="current_status">True</field>-->
+<!--            <field name="iqama_position">Administrative Manager</field>-->
+<!--            <field name="place_of_issue">Dammam</field>-->
+<!--        </record>-->
+
+<!--    </data>-->
+</odoo>

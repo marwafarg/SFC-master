@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- HR holiday Leave Type -->
+    <record model="ir.ui.view" id="edit_holiday_status_form_inherit">
+        <field name="name">hr.leave.type.form.inherit</field>
+        <field name="model">hr.leave.type</field>
+        <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+        <field name="arch" type="xml">
+            <!-- <xpath expr="//field[@name='name']" position="after">
+                <field name="code" attrs="{'required': [('is_deduction', '=', True)]}"/>
+            </xpath> -->
+            <xpath expr="//field[@name='request_unit']" position="before">
+                <field name="is_annual_leave"/>
+                <field name="one_time_usable"/>
+                <field name="is_deduction"/>
+                <field name="skip"/>
+            </xpath>
+            <field name="validity_start" position="attributes">
+                <attribute name="attrs">{'required': [('is_annual_leave', '=', True)]}</attribute>
+            </field>
+            <field name="validity_stop" position="attributes">
+                <attribute name="attrs">{'required': [('is_annual_leave', '=', True)]}</attribute>
+            </field>
+
+            <xpath expr="//group[@name='notification']" poition="after">
+                <group name="notes" string="Notes" colspan="2">
+                    <field name="notes"/>
+                </group>
+            </xpath>
+
+            <xpath expr="//sheet" position="inside">
+                <notebook attrs="{'invisible': [('is_deduction', '=', False)]}">
+                    <page string="Deduction">
+                        <group>
+                            <group>
+                                <field name="deduction_by" attrs="{'invisible': [('is_deduction', '=', False)],
+                                'required': [('is_deduction', '=', True)]}"/>
+                            </group>
+                        </group>
+                        <group string="Rules" name="rules">
+                            <field name="rule_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                    <field name="limit_from"/>
+                                    <field name="limit_to"/>
+                                    <field name="limit_per"/>
+                                    <field name="previous_line_id" invisible="1"/>
+                                    <field name="next_line_id" invisible="1"/>
+                                    <field name="leave_type_id" invisible="1"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_leave_rule_line_form" model="ir.ui.view">
+        <field name="name">hr.leave.rule.line.form</field>
+        <field name="model">hr.leave.rule.line</field>
+        <field name="arch" type="xml">
+            <form string="Leave Rules">
+                <sheet>
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="limit_per"/>
+                        <field name="limit_from"/>
+                        <field name="limit_to"/>
+                        <field name="leave_type_id" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="saudi_hr_leaves_detail_management_hr_leave_view_form" model="ir.ui.view">
+        <field name="name">hr.leave.view.form.manager</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+        <field name="priority" eval="32"/>
+        <field name="arch" type="xml">
+            <!-- <button name="action_approve" position="attributes">
+                <attribute name="groups">saudi_hr.group_line_manager,hr_holidays.group_hr_holidays_user</attribute>
+            </button>
+            <button name="action_validate" position="attributes">
+                <attribute name="groups">saudi_hr.group_hof,hr_holidays.group_hr_holidays_manager</attribute>
+            </button> -->
+            <xpath expr="//div[@name='title']" position="before">
+                <div class="alert alert-warning" role="alert" attrs="{'invisible': [('notes' ,'=', False)]}">
+                    <field name="notes" readonly="1"/>
+                </div>
+            </xpath>
+            <xpath expr="//sheet" position="inside">
+                <notebook>
+                    <page name="leave_details" string="Details" groups="hr.group_hr_manager">
+                        <group>
+                            <field name="leave_details" nolabel="1">
+                                <tree create="0" edit="0" delete="0">
+                                    <field name="name"/>
+                                    <field name="already_taken" sum="already_taken"/>
+                                    <field name="already_taken_month" sum="already_taken_month"/>
+                                    <field name="paid_leave" sum="paid_leave"/>
+                                    <field name="unpaid_leave" sum="unpaid_leave"/>
+                                    <field name="leave_hours" sum="leave_hours"/>
+                                    <field name="unpaid_leave_hours" sum="unpaid_leave_hours"/>
+                                    <field name="total_leave" invisible="1"/>
+                                    <field name="leave_id" invisible="1"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="saudi_hr_leaves_management_hr_leave_view_form" model="ir.ui.view">
+        <field name="name">hr.holidays.view.form</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_form"/>
+        <field name="arch" type="xml">
+            <button name="action_validate" position="attributes">
+                <attribute name="groups">hr_holidays.group_hr_holidays_user</attribute>
+            </button>
+        </field>
+    </record>
+
+    <!-- <record id="saudi_hr_leaves_management_hr_leave_view_tree" model="ir.ui.view">
+        <field name="name">hr.holidays.view.tree</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_tree"/>
+        <field name="arch" type="xml">
+            <button name="action_approve" position="attributes">
+                <attribute name="groups">saudi_hr.group_line_manager,hr_holidays.group_hr_holidays_user</attribute>
+            </button>
+            <button name="action_validate" position="attributes">
+                <attribute name="groups">saudi_hr.group_hof,hr_holidays.group_hr_holidays_manager</attribute>
+            </button>
+        </field>
+    </record> -->
+
+    <!-- <record id="saudi_hr_leaves_management_hr_leave_view_kanban" model="ir.ui.view">
+        <field name="name">hr.leave.view.kanban</field>
+        <field name="model">hr.leave</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_view_kanban"/>
+        <field name="arch" type="xml">
+            <button name="action_approve" position="attributes">
+                <attribute name="groups">saudi_hr.group_line_manager,hr_holidays.group_hr_holidays_user</attribute>
+            </button>
+        </field>
+    </record> -->
+
+</odoo>

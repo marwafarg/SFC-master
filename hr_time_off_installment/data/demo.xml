@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="0">
+
+        <!-- Work Entry Type -->
+        <record id="work_entry_type_leave_pay" model="hr.work.entry.type">
+            <field name="name">Leave Pay In Advance</field>
+            <field name="color">0</field>
+            <field name="code">LEV-PAY</field>
+        </record>
+
+    </data>
+</odoo>
+

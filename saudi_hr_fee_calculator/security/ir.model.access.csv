@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_expats_fee_gr_officer,access_expats_fee,model_expats_fee,saudi_hr.group_gr_manager,1,1,1,0
+access_expats_fee_manager,access_expats_fee,model_expats_fee,hr.group_hr_manager,1,1,1,1
+access_expats_fee_line_gr_officer,access_expats_fee_line,model_expats_fee_line,saudi_hr.group_gr_manager,1,1,1,0
+access_expats_fee_line_manager,access_expats_fee_line,model_expats_fee_line,hr.group_hr_manager,1,1,1,0
+access_expats_fee_line_gr_manager,access_expats_fee_line,model_expats_fee_line,saudi_hr.group_gr_manager,1,1,1,1

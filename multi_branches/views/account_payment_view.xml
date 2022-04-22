@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acoount_payments_branch_form_inherit" model="ir.ui.view">
+        <field name="name">account.payment.form</field>
+        <field name="model">account.payment</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="account.view_account_payment_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" context="{'company_id': company_id}" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+            </field>
+            <field name="journal_id" position="attributes">
+                <attribute name="context">{'branch_id': branch_id}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_supplier_payment_tree_inherit" model="ir.ui.view">
+        <field name="name">account.payment.tree</field>
+        <field name="model">account.payment</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="account.view_account_supplier_payment_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_payment_supplier_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">account.payment.supplier.search</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='partner']" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_account_payment_tree_tree_inherit" model="ir.ui.view">
+        <field name="name">account.payment.tree</field>
+        <field name="model">account.payment</field>
+        <field name="priority" eval="70"/>
+        <field name="inherit_id" ref="account.view_account_payment_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

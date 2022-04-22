@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="employee_gosi_al" model="employee.gosi">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="iqama_no">123654</field>
+            <field name="gosi_no">4325435</field>
+        </record>
+
+        <record id="employee_gosi_qdp" model="employee.gosi">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="iqama_no">188544</field>
+            <field name="gosi_no">4565435</field>
+         </record>
+
+        <record id="employee_gosi_fpi" model="employee.gosi">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="iqama_no">987654</field>
+            <field name="gosi_no">2347657</field>
+        </record>
+
+        <record id="employee_gosi_jep" model="employee.gosi">
+            <field name="employee_id" ref="hr.employee_jep"/>
+            <field name="iqama_no">189254</field>
+            <field name="gosi_no">3458768</field>
+        </record>
+
+        <record id="employee_gosi_stw" model="employee.gosi">
+            <field name="employee_id" ref="hr.employee_stw"/>
+            <field name="iqama_no">121654</field>
+            <field name="gosi_no">3459897</field>
+        </record>
+
+        <record id="hr.employee_al" model="hr.employee">
+            <field name="gosi_ids" ref="employee_gosi_al"/>
+        </record>
+        <record id="hr.employee_qdp" model="hr.employee">
+            <field name="gosi_ids" ref="employee_gosi_qdp"/>
+        </record>
+        <record id="hr.employee_fpi" model="hr.employee">
+            <field name="gosi_ids" ref="employee_gosi_fpi"/>
+        </record>
+        <record id="hr.employee_jep" model="hr.employee">
+            <field name="gosi_ids" ref="employee_gosi_jep"/>
+        </record>
+        <record id="hr.employee_stw" model="hr.employee">
+            <field name="gosi_ids" ref="employee_gosi_stw"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="employee_passport_register_al" model="emp.passport.register">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="passport_no">78978541</field>
+            <field name="place_of_issue">Jeddah</field>
+            <field name="profession">Developer</field>
+            <field name="issue_date" eval="DateTime.today()"/>
+            <field name="expiration_date" eval="DateTime.today() + relativedelta(days=10)"/>
+            <field name="loker">Jeddah Locker</field>
+            <field name="store_branch_id" ref="saudi_hr_branch.jeddah_office"/>
+            <field name="register_date" eval="DateTime.today()"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_register_qdp" model="emp.passport.register">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="passport_no">784841541</field>
+            <field name="place_of_issue">Riyadh</field>
+            <field name="profession">Developer</field>
+            <field name="issue_date" eval="DateTime.today()"/>
+            <field name="expiration_date" eval="DateTime.today() + relativedelta(months=6)"/>
+            <field name="loker">Riyadh Locker</field>
+            <field name="store_branch_id" ref="saudi_hr_branch.riyadh_office"/>
+            <field name="register_date" eval="DateTime.today()"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="state">confirm</field>
+        </record>
+
+        <record id="employee_passport_register_fpi" model="emp.passport.register">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="passport_no">98928541</field>
+            <field name="place_of_issue">Al Khobar</field>
+            <field name="profession">Developer</field>
+            <field name="issue_date" eval="DateTime.today()"/>
+            <field name="expiration_date" eval="DateTime.today() + relativedelta(months=1)"/>
+            <field name="loker">Al Khobar Locker</field>
+            <field name="store_branch_id" ref="saudi_hr_branch.al_khobar_office"/>
+            <field name="register_date" eval="DateTime.today()"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_register_jep" model="emp.passport.register">
+            <field name="employee_id" ref="hr.employee_jep"/>
+            <field name="passport_no">98987541</field>
+            <field name="place_of_issue">Al Khobar</field>
+            <field name="profession">Developer</field>
+            <field name="issue_date" eval="DateTime.today()"/>
+            <field name="expiration_date" eval="DateTime.today() + relativedelta(days=10)"/>
+            <field name="loker">Al Khobar Locker</field>
+            <field name="store_branch_id" ref="saudi_hr_branch.al_khobar_office"/>
+            <field name="register_date" eval="DateTime.today()"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="state">confirm</field>
+        </record>
+
+        <record id="employee_passport_register_stw" model="emp.passport.register">
+            <field name="employee_id" ref="hr.employee_stw"/>
+            <field name="passport_no">9812255</field>
+            <field name="place_of_issue">Al Khobar</field>
+            <field name="profession">Developer</field>
+            <field name="issue_date" eval="DateTime.today()"/>
+            <field name="expiration_date" eval="DateTime.today() + relativedelta(months=1)"/>
+            <field name="loker">Al Khobar Locker</field>
+            <field name="store_branch_id" ref="saudi_hr_branch.al_khobar_office"/>
+            <field name="register_date" eval="DateTime.today()"/>
+            <field name="user_id" ref="base.user_admin"/>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_al" model="emp.passport.request">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=5)"/>
+            <field name="reason">passport_renewal</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_qdp" model="emp.passport.request">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=10)"/>
+            <field name="reason">address_change</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_fpi" model="emp.passport.request">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=15)"/>
+            <field name="reason">adding_spouse_name</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_jep" model="emp.passport.request">
+            <field name="employee_id" ref="hr.employee_jep"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=5)"/>
+            <field name="reason">annual_vacation</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_stw" model="emp.passport.request">
+            <field name="employee_id" ref="hr.employee_stw"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=15)"/>
+            <field name="reason">business_trip</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_process_al" model="int.passport.process">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=5)"/>
+            <field name="reason">passport_renewal</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_qdp" model="int.passport.process">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=10)"/>
+            <field name="reason">address_change</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_fpi" model="int.passport.process">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=15)"/>
+            <field name="reason">adding_spouse_name</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_jep" model="int.passport.process">
+            <field name="employee_id" ref="hr.employee_jep"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=5)"/>
+            <field name="reason">annual_vacation</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="employee_passport_request_stw" model="int.passport.process">
+            <field name="employee_id" ref="hr.employee_stw"/>
+            <field name="date_from" eval="DateTime.today()"/>
+            <field name="date_to" eval="DateTime.today() + relativedelta(days=15)"/>
+            <field name="reason">business_trip</field>
+            <field name="state">draft</field>
+        </record>
+    </data>
+</odoo>

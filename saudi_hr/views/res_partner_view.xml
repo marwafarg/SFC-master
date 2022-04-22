@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_institute_partner_inherit" model="ir.ui.view">
+         <field name="name">res.partner.institute.inherit</field>
+         <field name="model">res.partner</field>
+         <field name="inherit_id" ref="base.view_partner_form"/>
+         <field name="arch" type="xml">
+             <field name="property_payment_term_id" position="before">
+                 <field name="institute"/>
+             </field>
+             <field name="property_supplier_payment_term_id" position="before">
+                 <field name="employee"/>
+             </field>
+             <field name="name" position="after">
+                 <field name="arabic_name" placeholder="Arabic Name"/>
+             </field>
+         </field>
+    </record>
+</odoo>

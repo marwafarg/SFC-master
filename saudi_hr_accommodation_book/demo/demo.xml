@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="accommodation_facility_1" model="facility">
+            <field name="name">AC</field>
+            <field name="note">AC available</field>
+        </record>
+
+        <record id="accommodation_facility_2" model="facility">
+            <field name="name">Swimming pool</field>
+            <field name="note">Fresh water Swimming pool with sun-loungers.</field>
+        </record>
+
+        <record id="accommodation_facility_3" model="facility">
+            <field name="name">WIFI</field>
+            <field name="note">Wifi and cable internet free of charge</field>
+        </record>
+
+        <record id="accommodation_villa_1" model="villa">
+            <field name="name">Royal Villa</field>
+            <field name="city">Jeddah</field>
+            <field name="per_day_charge">4000</field>
+            <field name="capacity">2</field>
+            <field name="contact_no">3281813700</field>
+            <field name="status">vacant</field>
+        </record>
+
+        <record id="accommodation_villa_2" model="villa">
+            <field name="name">Royal Palace Villa</field>
+            <field name="city">Riyadh</field>
+            <field name="contact_no">+328185670052</field>
+            <field name="capacity">1</field>
+            <field name="per_day_charge">2000</field>
+            <field name="status">in_use</field>
+        </record>
+
+        <record id="accommodation_hotel_1" model="hotel">
+            <field name="name">Royal Hotel</field>
+            <field name="city">Riyadh</field>
+            <field name="contact_no">+328185670052</field>
+            <field name="telephone">+3281856700</field>
+            <field name="email">royal.hotel@example.com</field>
+        </record>
+
+         <record id="accommodation_hotel_2" model="hotel">
+            <field name="name">Royal Palace Hotel</field>
+            <field name="city">Jeddah</field>
+            <field name="contact_no">+328185610052</field>
+            <field name="telephone">+3281856100</field>
+            <field name="email">royalpalace.hotel@example.com</field>
+        </record>
+
+        <record id="accommodation_room_1" model="room">
+            <field name="name">AC Rooms</field>
+            <field name="hotel_id" ref="accommodation_hotel_1"/>
+            <field name="facilities" eval="[(6, 0, [ref('saudi_hr_accommodation_book.accommodation_facility_1')])]"/>
+            <field name="per_day_charge">1000</field>
+        </record>
+
+        <record id="accommodation_room_2" model="room">
+            <field name="name">AC with Wifi Room</field>
+            <field name="hotel_id" ref="accommodation_hotel_1"/>
+            <field name="facilities" eval="[(6, 0, [ref('saudi_hr_accommodation_book.accommodation_facility_1', 'saudi_hr_accommodation_book.accommodation_facility_2')])]"/>
+            <field name="per_day_charge">2000</field>
+        </record>
+
+        <record id="accommodation_1" model="accommodation">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="city">Jeddah</field>
+            <field name="reason_id" ref="saudi_hr_accommodation_book.stay_purpose_secondment"/>
+            <field name="check_in_time" eval="(datetime.today() + relativedelta(days=3))"/>
+            <field name="check_out_time" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="payment_mode">own_account</field>
+            <field name="emp_contribution">5000</field>
+            <field name="description">Accomodation Book</field>
+            <field name="state">confirm</field>
+        </record>
+
+        <record id="accommodation_2" model="accommodation">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="city">Jeddah</field>
+            <field name="reason_id" ref="saudi_hr_accommodation_book.stay_purpose_new_joiners"/>
+            <field name="check_in_time" eval="(datetime.today() + relativedelta(days=3))"/>
+            <field name="check_out_time" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="payment_mode">company_account</field>
+            <field name="company_contribution">5000</field>
+            <field name="description">Accomodation Book</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="accommodation_3" model="accommodation">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="city">Riyadh</field>
+            <field name="reason_id" ref="saudi_hr_accommodation_book.stay_purpose_personal"/>
+            <field name="check_in_time" eval="(datetime.today() + relativedelta(days=3))"/>
+            <field name="check_out_time" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="payment_mode">both</field>
+            <field name="emp_contribution">5000</field>
+            <field name="company_contribution">5000</field>
+            <field name="description">Accomodation Book</field>
+            <field name="state">validate</field>
+        </record>
+
+        <record id="accommodation_line_1" model="accommodation.line">
+            <field name="accommodation_type">villa</field>
+            <field name="accommodation_id" ref="saudi_hr_accommodation_book.accommodation_1"/>
+            <field name="villa_id" ref="saudi_hr_accommodation_book.accommodation_villa_1"/>
+            <field name="check_in_time" eval="(datetime.today() + relativedelta(days=3))"/>
+            <field name="check_out_time" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="days">7</field>
+            <field name="amount">28000</field>
+        </record>
+
+        <record id="accommodation_line_2" model="accommodation.line">
+            <field name="accommodation_type">hotel</field>
+            <field name="accommodation_id" ref="saudi_hr_accommodation_book.accommodation_3"/>
+            <field name="hotel_id" ref="saudi_hr_accommodation_book.accommodation_hotel_1"/>
+            <field name="room_id" ref="saudi_hr_accommodation_book.accommodation_room_1"/>
+            <field name="check_in_time" eval="(datetime.today() + relativedelta(days=3))"/>
+            <field name="check_out_time" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="days">7</field>
+            <field name="amount">7000</field>
+        </record>
+    </data>
+</odoo>

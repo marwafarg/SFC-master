@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Annual Ticket-->
+<!--    <record model="ir.ui.view" id="annual_ticket_from_view">-->
+<!--        <field name="name">Annual Ticket</field>-->
+<!--        <field name="model">annual.ticket</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Annual Ticket">-->
+<!--                <header>-->
+<!--                    <button name="action_annual_ticket_by_employees" string="Generate" type="object" class="oe_highlight"/>-->
+<!--                </header>-->
+<!--                <sheet>-->
+<!--                    <group>-->
+<!--                        <group>-->
+<!--                            <field name="name"/>-->
+<!--                        </group>-->
+<!--                        <group>-->
+<!--                            <field name="year_id"/>-->
+<!--                        </group>-->
+<!--                    </group>-->
+<!--                    <field name="annual_ticket_detail_ids" context="{'default_year_id': year_id}">-->
+<!--                        <tree>-->
+<!--                            <field name="employee_id"/>-->
+<!--                            <field name="allocated_amount" sum="Total Allocated Amount"/>-->
+<!--                            <field name="used_amount" sum="Total Used Amount"/>-->
+<!--                            <field name="remaining_amount" sum="Total Remaining Amount"/>-->
+<!--                        </tree>-->
+<!--                        <form>-->
+<!--                            <header>-->
+<!--                                <button name="generate_air_allowance" string="Generate Allowance" type="object"  attrs="{'invisible': [('remaining_amount', '=', 0)]}" class="oe_highlight"/>-->
+<!--                            </header>-->
+<!--                            <sheet>-->
+<!--                                <group>-->
+<!--                                    <group>-->
+<!--                                        <field name="employee_id"/>-->
+<!--                                        <field name="adult_fare"/>-->
+<!--                                        <field name="infant_fare"/>-->
+<!--                                        <field name="child_fare"/>-->
+<!--                                        <field name="year_id" invisible="1"/>-->
+<!--                                    </group>-->
+<!--                                    <group>-->
+<!--                                        <field name="adults" string="Adult(s)"/>-->
+<!--                                        <field name="infant" string="Infant(s)"/>-->
+<!--                                        <field name="children" string="Children"/>-->
+<!--                                        <field name="allocated_amount"/>-->
+<!--                                        <field name="used_amount"/>-->
+<!--                                        <field name="remaining_amount"/>-->
+<!--                                    </group>-->
+<!--                                </group>-->
+<!--                                <notebook>-->
+<!--                                    <page string="Ticket Status" name="ticket_status">-->
+<!--                                        <field name="ticket_status_ids" readonly="1">-->
+<!--                                            <tree>-->
+<!--                                                <field name="member_type"/>-->
+<!--                                                <field name="ticket_status"/>-->
+<!--                                                <field name="allocated_amount"/>-->
+<!--                                                <field name="used_amount"/>-->
+<!--                                                <field name="remaining_amount"/>-->
+<!--                                            </tree>-->
+<!--                                        </field>-->
+<!--                                    </page>-->
+<!--                                    <page string="Allowance" name="air_allowance">-->
+<!--                                        <field name="other_hr_payslip_ids">-->
+<!--                                            <tree>-->
+<!--                                                <field name="employee_id"/>-->
+<!--                                                <field name="calc_type"/>-->
+<!--                                                <field name="operation_type"/>-->
+<!--                                                <field name="amount"/>-->
+<!--                                                <field name="state"/>-->
+<!--                                            </tree>-->
+<!--                                        </field>-->
+<!--                                    </page>-->
+<!--                                </notebook>-->
+<!--                            </sheet>-->
+<!--                        </form>-->
+<!--                    </field>-->
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+<!--    <record id="action_annual_ticket_view" model="ir.actions.act_window">-->
+<!--        <field name="name">Annual Ticket</field>-->
+<!--        <field name="res_model">annual.ticket</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--    </record>-->
+
+<!--    <menuitem id="menu_annual_ticket" parent="hr.menu_hr_employee_payroll"-->
+<!--            sequence="10" string="Annual Ticket" action="action_annual_ticket_view"/>-->
+</odoo>

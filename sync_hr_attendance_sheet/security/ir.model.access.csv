@@ -1,0 +1,16 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_attendance_rules_manager,attendance.rules.manager,model_attendance_rules,hr_attendance.group_hr_attendance_manager,1,1,1,1
+access_attendance_rules_hr_user,attendance.rules.hr.user,model_attendance_rules,hr_attendance.group_hr_attendance,1,1,1,0
+access_attendance_rules_user,attendance.rules.user,model_attendance_rules,base.group_user,1,0,0,0
+access_attendance_policy_manager,attendance.policy.manager,model_attendance_policy,hr_attendance.group_hr_attendance_manager,1,1,1,1
+access_attendance_policy_hr_user,attendance.policy.hr.user,model_attendance_policy,hr_attendance.group_hr_attendance,1,1,1,0
+access_attendance_policy_user,attendance.policy.user,model_attendance_policy,base.group_user,1,0,0,0
+access_attendance_sheet_manager,attendance.sheet.manager,model_attendance_sheet,hr_attendance.group_hr_attendance_manager,1,1,1,1
+access_attendance_sheet_hr_user,attendance.sheet.hr.user,model_attendance_sheet,hr_attendance.group_hr_attendance,1,1,1,0
+access_attendance_sheet_user,attendance.sheet.user,model_attendance_sheet,base.group_user,1,0,0,0
+access_attendance_sheet_line_manager,attendance.sheet.line.manager,model_attendance_sheet_line,hr_attendance.group_hr_attendance_manager,1,1,1,1
+access_attendance_sheet_line_hr_user,attendance.sheet.line.hr.user,model_attendance_sheet_line,hr_attendance.group_hr_attendance,1,1,1,0
+access_attendance_sheet_line_user,attendance.sheet.line.user,model_attendance_sheet_line,base.group_user,1,0,0,0
+access_attendance_sheet_details_manager,attendance.sheet.details.manager,model_attendance_sheet_details,hr_attendance.group_hr_attendance_manager,1,1,1,1
+access_attendance_sheet_details_hr_user,attendance.sheet.details.hr.user,model_attendance_sheet_details,hr_attendance.group_hr_attendance,1,1,1,0
+access_attendance_sheet_details_user,attendance.sheet.details.user,model_attendance_sheet_details,base.group_user,1,0,0,0

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <!--Annual Ticket-->
+    <record model="ir.ui.view" id="generate_air_allowance_from_view">
+        <field name="name">Generate Air Allowance</field>
+        <field name="model">generate.air.allowance</field>
+        <field name="arch" type="xml">
+            <form string="Generate Air Allowance">
+                <group>
+                    <group>
+                        <field name="allowance_amount"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="generate_allowance" string="Generate" type="object" class="oe_highlight"/>
+                    or
+                    <button  class="oe_link" string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_generate_air_allowance_view" model="ir.actions.act_window">
+        <field name="name">Generate Air Allowanace</field>
+        <field name="res_model">generate.air.allowance</field>
+        <field name="view_mode">form</field>
+    </record>
+</odoo>

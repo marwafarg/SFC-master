@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree view of Attendance Sheet -->
+    <record model="ir.ui.view" id="view_attendance_sheet_tree">
+        <field name="name">attendance.sheet.tree</field>
+        <field name="model">attendance.sheet</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Sheet">
+                <field name="name"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="attendance_policy_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view of Attendance sheet -->
+    <record model="ir.ui.view" id="view_attendance_sheet_from">
+        <field name="name">attendance.sheet.from</field>
+        <field name="model">attendance.sheet</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Sheet">
+                <header>
+                    <button name="%(action_generate_attendance_sheet_view)d" type="action" string="Generate Attendance Sheet" class="btn-primary" groups="hr.group_hr_user" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_confirm" type="object" string="Confirm" class="btn-primary" groups="hr.group_hr_user" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_refuse" type="object" string="Refuse" class="btn-primary" groups="hr.group_hr_user" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirm"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="name" placeholder="Sheet Name" required="1"/>
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="start_date" string="Period"/>
+                            <div class="o_row">
+                                <field name="start_date" class="oe_inline" attrs="{'readonly': [('state', '!=', 'draft')]}"/> - <field name="end_date" class="oe_inline" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="attendance_policy_id" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="company_id" attrs="{'readonly': [('state', '!=', 'draft')]}" groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Attendance Sheet" name="attendance_sheet">
+                            <group colspan="4">
+                                <field name="attendance_sheet_line_ids" nolabel="1" multi_edit="1" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom" create="false" edit="false">
+                                        <field name="employee_id" required="1" readonly="1" force_save="1"/>
+                                        <field name="total_attendance" readonly="1" force_save="1"/>
+                                        <field name="num_total_overtime" optional="hide"/>
+                                        <field name="total_overtime" widget="float_time" sum="Total Overtime"/>
+                                        <field name="num_total_absence" optional="hide"/>
+                                        <field name="total_absence" widget="float_time" sum="Total Absence"/>
+                                        <field name="num_total_diff_time" optional="hide"/>
+                                        <field name="total_diff_time" widget="float_time" sum="Total Difference"/>
+                                        <field name="num_total_late_in" optional="hide"/>
+                                        <field name="total_late_in" widget="float_time" sum="Total Late"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action of Attendance Sheet -->
+    <record model="ir.actions.act_window" id="action_attendance_sheet">
+        <field name="name">Attendance sheet</field>
+        <field name="res_model">attendance.sheet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Attendance Sheet
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_attendance_sheet" action="action_attendance_sheet" name="Attendance Sheet" parent="hr_attendance.menu_hr_attendance_manage_attendances" sequence="21" groups="hr_attendance.group_hr_attendance_user"/>
+
+    <!-- Tree view of Attendance Sheet Line -->
+    <record model="ir.ui.view" id="view_attendance_sheet_line_tree">
+        <field name="name">attendance.sheet.line.tree</field>
+        <field name="model">attendance.sheet.line</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Sheet Line">
+                <field name="employee_id"/>
+                <field name="total_attendance" widget="float_time"/>
+                <field name="num_total_overtime"/>
+                <field name="total_overtime" widget="float_time"/>
+                <field name="num_total_absence"/>
+                <field name="total_absence" widget="float_time"/>
+                <field name="num_total_diff_time"/>
+                <field name="total_diff_time" widget="float_time"/>
+                <field name="num_total_late_in"/>
+                <field name="total_late_in" widget="float_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view of Attendance sheet Line -->
+    <record model="ir.ui.view" id="view_attendance_sheet_line_from">
+        <field name="name">attendance.sheet.line.from</field>
+        <field name="model">attendance.sheet.line</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Sheet Line">
+                <header>
+                    <button name="deduct_late_entry_days" type="object" string="Deduct Late Entry Days" class="btn-primary" groups="hr.group_hr_user"/>
+                    <button name="approve_all_late_in" type="object" string="Approve All Late Entry" class="btn-primary" groups="hr.group_hr_user"/>
+                    <button name="refuse_all_late_in" type="object" string="Refuse All Late Entry" class="btn-primary" groups="hr.group_hr_user"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" required="1"/>
+                            <field name="num_total_overtime"/>
+                            <field name="num_total_absence"/>
+                            <field name="num_total_diff_time"/>
+                            <field name="num_total_late_in"/>
+                        </group>
+                        <group>
+                            <field name="total_attendance"/>
+                            <field name="total_overtime" widget="float_time"/>
+                            <field name="total_absence" widget="float_time"/>
+                            <field name="total_diff_time" widget="float_time"/>
+                            <field name="total_late_in" widget="float_time"/>
+                            <field name="attendance_sheet_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Overtime Calculation">
+                            <field name="total_normal_overtime" widget="float_time"/>
+                            <field name="total_weekend_holiday_overtime" widget="float_time"/>
+                            <field name="total_public_holiday_overtime" widget="float_time"/>
+                        </group>
+                        <group string="Late In Calculation">
+                            <field name="total_no_policy_late_in" />
+                            <field name="total_no_approve_late_in" />
+                            <field name="total_no_refuse_late_in" />
+                        </group>
+                    </group>
+                    <group string="Attendance Details">
+                        <field name="attendance_sheet_details_ids" nolabel="1">
+                            <tree create="false" edit="false" multi_edit="1" decoration-danger="is_refused == True" decoration-success="is_approved == True" decoration-info="late_in!=0 and is_approved == False">
+                                <field name="attendance_date"/>
+                                <field name="week_list" optional="hide"/>
+                                <field name="planning_check_in" widget="float_time" optional="hide"/>
+                                <field name="planning_check_out" widget="float_time" optional="hide"/>
+                                <field name="actual_check_in" widget="float_time"/>
+                                <field name="actual_check_out" widget="float_time"/>
+                                <field name="worked_hours" widget="float_time" />
+                                <field name="late_in" widget="float_time" invisible="1"/>
+                                <field name="total_late_in" widget="float_time" string="Late In"/>
+                                <field name="overtime" widget="float_time" />
+                                <field name="diff_time" widget="float_time"/>
+                                <field name="status"/>
+                                <field name="planning_worked_hours" invisible="1" widget="float_time" readonly="1"/>
+                                <field name="is_approved" invisible="1"/>
+                                <field name="is_refused" invisible="1"/>
+                                <button name="approve_late_in" type="object" icon="fa-lg fa-check" string="Accept" attrs="{'invisible':['|', '|', ('late_in', '==', 0), ('is_approved', '==', True), ('is_refused', '==', True)]}"/>
+                                <button name="refuse_late_in" type="object" icon="fa-lg fa-times" string="Refuse" attrs="{'invisible':['|', '|', ('late_in', '==', 0), ('is_approved', '==', True), ('is_refused', '==', True)]}"/>
+                            </tree>
+                        </field>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action of Attendance Sheet Line -->
+    <record model="ir.actions.act_window" id="action_attendance_sheet_line">
+        <field name="name">Attendance sheet Line</field>
+        <field name="res_model">attendance.sheet.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Attendance Sheet Line
+            </p>
+        </field>
+    </record>
+
+    <!-- Tree view of Attendance Sheet Details -->
+    <record model="ir.ui.view" id="view_attendance_sheet_details_tree">
+        <field name="name">attendance.sheet.details.tree</field>
+        <field name="model">attendance.sheet.details</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Sheet Details">
+                <field name="attendance_date"/>
+                <field name="week_list"/>
+                <field name="planning_check_in" widget="float_time"/>
+                <field name="planning_check_out" widget="float_time"/>
+                <field name="actual_check_in" widget="float_time"/>
+                <field name="actual_check_out" widget="float_time"/>
+                <field name="worked_hours" widget="float_time"/>
+                <field name="late_in" widget="float_time" invisible="1"/>
+                <field name="total_late_in" widget="float_time" string="Late In"/>
+                <field name="overtime" widget="float_time"/>
+                <field name="diff_time" widget="float_time"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view of Attendance sheet Details -->
+    <record model="ir.ui.view" id="view_attendance_sheet_details_from">
+        <field name="name">attendance.sheet.details.from</field>
+        <field name="model">attendance.sheet.details</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Sheet Details">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="attendance_date"/>
+                            <field name="planning_check_in" widget="float_time"/>
+                            <field name="actual_check_in" widget="float_time"/>
+                            <field name="worked_hours" widget="float_time"/>
+                            <field name="overtime" widget="float_time"/>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="week_list"/>
+                            <field name="planning_check_out" widget="float_time"/>
+                            <field name="actual_check_out" widget="float_time"/>
+                            <field name="late_in" widget="float_time" invisible="1"/>
+                            <field name="total_late_in" widget="float_time" string="Late In"/>
+                            <field name="diff_time" widget="float_time"/>
+                            <field name="attendance_sheet_line_id" invisible="1"/>
+                            <field name="planning_worked_hours" invisible="1" widget="float_time" readonly="1"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action of Attendance Sheet Details -->
+    <record model="ir.actions.act_window" id="action_attendance_sheet_details">
+        <field name="name">Attendance sheet Details</field>
+        <field name="res_model">attendance.sheet.details</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

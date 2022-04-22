@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Branch  -->
+
+<!--    <record id="main_branch" model="res.branch">-->
+<!--        <field name="name">Your branch</field>-->
+<!--        <field name="company_id" ref="base.main_company"/>-->
+<!--        <field name="email">info@yourbranch.com</field>-->
+<!--        <field name="website">www.yourbranch.com</field>-->
+<!--    </record>-->
+
+<!--    <record model="res.users" id="base.user_root">-->
+<!--        <field name="branch_id" ref="main_branch"/>-->
+<!--        <field name="branch_ids" eval="[(4, ref('main_branch'))]"/>-->
+<!--    </record>-->
+
+<!--    <record model="res.users" id="base.user_admin">-->
+<!--        <field name="branch_id" ref="main_branch"/>-->
+<!--        <field name="branch_ids" eval="[(4, ref('main_branch'))]"/>-->
+<!--    </record>-->
+
+<!--    <record model="res.partner" id="base.partner_root">-->
+<!--        <field name="branch_id" ref="main_branch"/>-->
+<!--    </record>-->
+
+</odoo>

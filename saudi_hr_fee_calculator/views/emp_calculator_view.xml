@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="expats_fee_filter" model="ir.ui.view">
+        <field name="name">Fee Calculator</field>
+        <field name="model">expats.fee</field>
+        <field name="arch" type="xml">
+            <search string="Filter">
+                <group expand='0' string='Group By'>
+                    <filter name="group_year" string="Year" context="{'group_by':'year'}"/>
+                    <filter name="group_up_level_fee" string="Up level Fee" context="{'group_by':'up_level_fee'}"/>
+                    <filter name="group_down_level_fee" string="Down Level Fee" context="{'group_by':'down_level_fee'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_expats_fee_form" model="ir.ui.view">
+        <field name="name">Fee Calculator</field>
+        <field name="model">expats.fee</field>
+        <field name="arch" type="xml">
+            <form string="Fee Calcultor">
+                <header>
+                    <button name="confirm_expats_fee" string="Confirm" states="draft" type="object" class="oe_highlight" groups="saudi_hr.group_gr_manager"/>
+                    <button name="done_expats_fee" string="Done" states="confirm" type="object" class="oe_highlight" group="saudi_hr.group_gr_manager"/>
+                    <button name="cancel_expats_fee" string="Cancel" states="draft,done" type="object" group="saudi_hr.group_gr_manager"/>
+                    <button name="draft_expats_fee" string="Set to Draft" states="cancelled" type="object" groups="saudi_hr.group_gr_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="confirm"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                           <field name="year" attrs="{'readonly':[('state','in',('done', 'cancelled'))]}"/>
+                        </group>
+                        <group>
+                           <field name="up_level_fee" attrs="{'readonly':[('state','in',('done', 'cancelled'))]}"/>
+                           <field name="down_level_fee" attrs="{'readonly':[('state','in',('done', 'cancelled'))]}"/>
+                           <field name="company_id" groups="base.group_multi_company" attrs="{'readonly':[('state','in',('done', 'cancelled'))]}"/>
+                        </group>
+                    </group>
+                    <field name="expats_fee_line" nolabel="1" attrs="{'readonly':[('state','in',('done', 'cancelled'))]}">
+                        <tree editable="1">
+                            <field name="month"/>
+                            <field name="fee"/>
+                            <field name="total_saudi_employee"/>
+                            <field name="total_expats_employee"/>
+                            <field name="total_employee"/>
+                            <field name="ratio"/>
+                            <field name="total_fee"/>
+                            <field name="expats_fee_id" invisible="1"/>
+                        </tree>
+                    </field>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_expats_fee_tree" model="ir.ui.view">
+        <field name="name">expats.fee.tree.view</field>
+        <field name="model">expats.fee</field>
+        <field name="arch" type="xml">
+            <tree string="Fee Calculator">
+                <field name="year"/>
+                <field name="up_level_fee"/>
+                <field name="down_level_fee"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_expats_fee" model="ir.actions.act_window">
+        <field name="name">Fee Calculator</field>
+        <field name="res_model">expats.fee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="expats_fee_line_filter" model="ir.ui.view">
+        <field name="name">expats.fee_line</field>
+        <field name="model">expats.fee.line</field>
+        <field name="arch" type="xml">
+            <search string="Filter">
+                <field name="expats_fee_id"/>
+                <field name="month"/>
+                <field name="total_employee"/>
+                <field name="total_fee"/>
+                <field name="fee"/>
+                <group expand='0' string='Group By'>
+                    <filter name="group_month" string="Month" context="{'group_by':'month'}"/>
+                    <filter name="group_expats_fee" string="Expats Fee" context="{'group_by':'expats_fee_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="view_expats_fee_line" model="ir.ui.view">
+        <field name="name">Fee Calculator Lines</field>
+        <field name="model">expats.fee.line</field>
+        <field name="arch" type="xml">
+            <form string="Expats Fee Line">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="expats_fee_id" required="1" attrs="{'readonly':[('done','=',True)]}"/>
+                            <field name="month" attrs="{'readonly':[('done','=',True)]}"/>
+                            <field name="fee" attrs="{'readonly':[('done','=',True)]}"/>
+                        </group>
+                        <group>
+                            <field name="ratio" readonly="1"/>
+                            <field name="total_fee" readonly="1"/>
+                            <field name="total_saudi_employee" readonly="1"/>
+                            <field name="total_expats_employee" readonly="1"/>
+                            <field name="total_employee" readonly="1"/>
+                            <field name="done" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_expats_fee_line_tree" model="ir.ui.view">
+        <field name="name">expats.fee.line.tree.view</field>
+        <field name="model">expats.fee.line</field>
+        <field name="arch" type="xml">
+            <tree string="Fee Calculator Lines">
+                <field name="expats_fee_id"/>
+                <field name="month"/>
+                <field name="ratio"/>
+                <field name="fee"/>
+                <field name="total_saudi_employee"/>
+                <field name="total_expats_employee"/>
+                <field name="total_employee"/>
+                <field name="total_fee"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_expats_fee_line" model="ir.actions.act_window">
+        <field name="name">Expats Fee Line</field>
+        <field name="res_model">expats.fee.line</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

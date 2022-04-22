@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+<!--    <data noupdate="1">-->
+<!--        &lt;!&ndash; Schedular Calculate Expats fee &ndash;&gt;-->
+<!--        <record id="cron_expats_fee_line" model="ir.cron">-->
+<!--            <field name="name">Schedular Calculate Expats fee</field>-->
+<!--            <field name="model_id" ref="model_expats_fee_line"/>-->
+<!--            <field name="interval_number">1</field>-->
+<!--            <field name="interval_type">months</field>-->
+<!--            <field name="numbercall">-1</field>-->
+<!--            <field name="state">code</field>-->
+<!--            <field name="code">model.schedular_calculate_fee()</field>-->
+<!--            <field name="doall" eval="False"/>-->
+<!--        </record>-->
+<!--    </data>-->
+</odoo>

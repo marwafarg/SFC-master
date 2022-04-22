@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Rules -->
+    <record id="gr_operations_emp_rule" model="ir.rule">
+        <field name="name">Employee Operations</field>
+        <field name="model_id" ref="model_gr_operations"/>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+        <field name="domain_force">['|',('message_partner_ids', '=', user.partner_id.id), ('employee_id.user_id', '=', user.id)]</field>
+    </record>
+    <record id="gr_operations_officer_rule" model="ir.rule">
+        <field name="name">Officer Operations</field>
+        <field name="model_id" ref="model_gr_operations"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|', ('message_partner_ids', 'child_of', [user.partner_id.id]), '|', ('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

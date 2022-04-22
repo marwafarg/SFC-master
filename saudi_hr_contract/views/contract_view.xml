@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_contract_view_inherit_overtime_form1" model="ir.ui.view">
+        <field name="name">hr.contract.view.inherit.overtime.form1</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="priority" eval="20"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='resource_calendar_id']" position="after">
+                <field name="is_leaving" attrs="{'invisible':[('is_leaving','=',False)]}" string="Is Leavning"/>
+                <label for="notice_start_date" string="Leaving Notice Period " attrs="{'invisible':[('is_leaving','=',False)]}"/>
+                <div attrs="{'invisible':[('is_leaving','=',False)]}">
+                    <field name="notice_start_date" class="oe_inline" /> - <field name="notice_end_date" class="oe_inline"/>
+                </div>
+            </xpath>
+<!--            <xpath expr="//field[@name='trial_date_end']" position="after">-->
+<!--                <field name="before_notification_day" string="Before Notification Days (End Date)"/>-->
+<!--                <field name="early_notification_day"/>-->
+<!--                <field name="trial_notification_day_before"/>-->
+<!--            </xpath>-->
+            <xpath expr="//page[@name='information']//group[@name='salary_and_advantages']" position="inside">
+                <field name="basic"/>
+                <field name="HRA"/>
+                <field name="TA"/>
+                <field name="allowance1"/>
+                <field name="allowance2"/>
+                <field name="allowance3"/>
+                <field name="allowance4"/>
+                <field name="total_salary"/>
+            </xpath>
+            <xpath expr="//page[@name='information']" position="inside">
+                <group name="other_allowance" string="Other Allowances">
+                    <group>
+                        <field name="signon_bonus"/>
+                        <field name="signon_bonus_amount" attrs="{'invisible': [('signon_bonus','!=',True)], 'required': [('signon_bonus','=',True)]}" />
+                        <field name="period_ids" widget="many2many_tags" attrs="{'invisible': [('signon_bonus','!=',True)], 'required': [('signon_bonus','=',True)]}" />
+                    </group>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='information']" position="after">
+                <page string="Extra Information" groups="base.group_no_one">
+                    <group col="4">
+                        <field name="create_uid" readonly="1"/>
+                        <field name="create_date" readonly="1"/>
+                        <field name="write_uid" readonly="1"/>
+                        <field name="write_date" readonly="1"/>
+                    </group>
+                </page>
+            </xpath>
+            <!-- <field name="analytic_account_id" position="after">
+                <field name="analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags"/>
+            </field> -->
+        </field>
+    </record>
+
+<!--    <record id="saudi_hr_contract_hr_contract_form_inherit" model="ir.ui.view">-->
+<!--        <field name="name">saudi.hr.contract.view.inherit</field>-->
+<!--        <field name="model">hr.contract</field>-->
+<!--        <field name="inherit_id" ref="hr_payroll_account.hr_contract_form_inherit" />-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="analytic_account_id" position="after">-->
+<!--                <field name="analytic_tag_ids" widget="many2many_tags" groups="analytic.group_analytic_tags"/>-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+
+
+    <record id="hr_contract_view_search" model="ir.ui.view">
+        <field name="name">hr.contract.view.search</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_search" />
+        <field name="arch" type="xml">
+            <filter name="inactive" position="after">
+                <filter name="saudi" string="Saudi" domain="[('employee_id.is_saudi','=','True')]"/>
+                <filter name="non_saudi" string="Non-Saudi" domain="[('employee_id.is_saudi','!=','True')]"/>
+                <filter name="pending" string="To be Renew" icon="terp-go-today" domain="[('state','=','pending')]"/>
+           </filter>
+        </field>
+    </record>
+</odoo>

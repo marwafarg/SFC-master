@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="airlines_saudigulf" model="airlines">
+            <field name="name">SaudiGulf</field>
+            <field name="code">SGQ</field>
+        </record>
+
+        <record id="airlines_flyadeal" model="airlines">
+            <field name="name">Flyadeal</field>
+            <field name="code">FAD</field>
+        </record>
+
+        <record id="flight_booking_1" model="flight.booking">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="payment_mode">own_account</field>
+            <field name="emp_contribution">3000</field>
+            <field name="ticket_type">single</field>
+            <field name="type">return</field>
+            <field name="reason">internal</field>
+            <field name="source">Mecca</field>
+            <field name="destination">Riyadh</field>
+            <field name="seats">1</field>
+            <field name="departure_date" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="arrival_date" eval="(datetime.today() + relativedelta(days=15))"/>
+            <field name="description">Flight booking for internal meeting</field>
+            <field name="po_number">123655</field>
+            <field name="supplier_id" ref="base.res_partner_12"/>
+            <field name="state">in_progress</field>
+        </record>
+
+        <record id="flight_booking_2" model="flight.booking">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="payment_mode">company_account</field>
+            <field name="company_contribution">6000</field>
+            <field name="ticket_type">group</field>
+            <field name="type">single</field>
+            <field name="reason">personal</field>
+            <field name="source">Medina</field>
+            <field name="destination">Jeddah</field>
+            <field name="seats">3</field>
+            <field name="departure_date" eval="(datetime.today() + relativedelta(days=5))"/>
+            <field name="description">Flight booking for personal meeting</field>
+            <field name="po_number">123654</field>
+            <field name="supplier_id" ref="base.res_partner_12"/>
+            <field name="state">received</field>
+        </record>
+
+        <record id="flight_booking_3" model="flight.booking">
+            <field name="employee_id" ref="hr.employee_fpi"/>
+            <field name="payment_mode">both</field>
+            <field name="emp_contribution">5000</field>
+            <field name="company_contribution">5000</field>
+            <field name="ticket_type">family</field>
+            <field name="type">return</field>
+            <field name="reason">others</field>
+            <field name="source">Jeddah</field>
+            <field name="destination">Medina</field>
+            <field name="seats">5</field>
+            <field name="departure_date" eval="(datetime.today() + relativedelta(days=15))"/>
+            <field name="arrival_date" eval="(datetime.today() + relativedelta(days=20))"/>
+            <field name="description">Flight booking from Jeddah to Medina</field>
+            <field name="state">draft</field>
+        </record>
+
+        <record id="flight_booking_line_1" model="flight.booking.line">
+            <field name="employee_id" ref="hr.employee_qdp"/>
+            <field name="booking_id" ref="flight_booking_2"/>
+            <field name="ticket_no">256874</field>
+            <field name="travel_date" eval="(datetime.today() + relativedelta(days=5))"/>
+            <field name="airline" ref="airlines_saudigulf"/>
+            <field name="invoice_amount">5000</field>
+            <field name="source">Madina</field>
+            <field name="destination">Jeddah</field>
+            <field name="seats">1</field>
+            <field name="flight_class">first</field>
+        </record>
+
+        <record id="flight_booking_line_2" model="flight.booking.line">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="booking_id" ref="flight_booking_1"/>
+            <field name="ticket_no">345353</field>
+            <field name="travel_date" eval="(datetime.today() + relativedelta(days=10))"/>
+            <field name="airline" ref="airlines_flyadeal"/>
+            <field name="invoice_amount">2500</field>
+            <field name="source">Mecca</field>
+            <field name="destination">Riyadh</field>
+            <field name="seats">1</field>
+            <field name="flight_class">business</field>
+        </record>
+
+        <record id="flight_booking_line_3" model="flight.booking.line">
+            <field name="employee_id" ref="hr.employee_al"/>
+            <field name="booking_id" ref="flight_booking_1"/>
+            <field name="ticket_no">345354</field>
+            <field name="travel_date" eval="(datetime.today() + relativedelta(days=15))"/>
+            <field name="airline" ref="airlines_flyadeal"/>
+            <field name="invoice_amount">2500</field>
+            <field name="source">Riyadh</field>
+            <field name="destination">Mecca</field>
+            <field name="seats">1</field>
+            <field name="flight_class">business</field>
+        </record>
+
+        <record id="group_member_group_1" model="group.member">
+            <field name="name">Tom</field>
+            <field name="type">employee</field>
+            <field name="booking_id" ref="flight_booking_2"/>
+        </record>
+
+        <record id="group_member_group_2" model="group.member">
+            <field name="name">John</field>
+            <field name="type">visitor</field>
+            <field name="booking_id" ref="flight_booking_2"/>
+        </record>
+
+        <record id="group_member_family_1" model="group.member">
+            <field name="name">Sabeeh</field>
+            <field name="type">family</field>
+            <field name="booking_id" ref="flight_booking_3"/>
+        </record>
+
+        <record id="group_member_family_2" model="group.member">
+            <field name="name">Zaheena</field>
+            <field name="type">family</field>
+            <field name="booking_id" ref="flight_booking_3"/>
+        </record>
+
+        <record id="group_member_family_2" model="group.member">
+            <field name="name">Tina</field>
+            <field name="type">other</field>
+            <field name="booking_id" ref="flight_booking_3"/>
+        </record>
+
+    </data>
+</odoo>

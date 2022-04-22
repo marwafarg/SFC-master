@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <report
+            id="action_report_advance_salary"
+            string="Advance Salary"
+            model="hr.advance.salary"
+            report_type="qweb-pdf"
+            file="sync_employee_advance_salary.report_advancesalary"
+            name="sync_employee_advance_salary.report_advancesalary"
+        />
+</odoo>

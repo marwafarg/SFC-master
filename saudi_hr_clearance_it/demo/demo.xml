@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="saudi_hr_clearance.hr_employee_clearance_jth" model="hr.employee.clearance">
+            <field name="it_dept">True</field>
+        </record>
+
+        <record id="saudi_hr_clearance.hr_employee_clearance_fme" model="hr.employee.clearance">
+            <field name="it_dept">True</field>
+        </record>
+
+        <record model="clearance.department.data" id="saudi_hr_clearance_it.clearance_dept_2">
+            <field name="department_type">it</field>
+            <field name="item">Blackberry</field>
+            <field name="item_state">na</field>
+        </record>
+    </data>
+</odoo>

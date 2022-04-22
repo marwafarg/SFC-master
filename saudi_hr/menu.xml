@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--        <menuitem id="hr.menu_human_resources_configuration" name="Configuration" parent="hr.menu_hr_root" groups="group_gr_officer,hr.group_hr_user,group_line_manager,group_hof" sequence="99"/>-->
+<!--        <menuitem id="menu_gr" name="GR Operations" sequence="14" web_icon="saudi_hr_gr_operation_request,static/description/icon.png"/>-->
+<!--        <menuitem action="hr.open_view_categ_form" id="hr.menu_view_employee_category_form" parent="hr.menu_human_resources_configuration" sequence="1" groups="base.group_no_one,hr.group_hr_user"/>-->
+<!--        <menuitem action="base.action_res_partner_bank_account_form" id="menu_action_res_partner_bank_form_inherit" parent="hr.menu_human_resources_configuration"/>-->
+<!--        <menuitem id="saudi_hr_groups_configuration.menu_hr_groups_config_action" parent="hr.menu_human_resources_configuration" sequence="0" action="saudi_hr_groups_configuration.action_view_hr_groups_config" groups="hr.group_hr_manager"/>-->
+        <!--No need to use this menu-->
+        <!--<menuitem action="hr.open_view_employee_list_my" id="hr.menu_open_view_employee_list_my" sequence="3" parent="hr.menu_hr_main"/>-->
+
+        <!-- menu for reports -->
+        <menuitem id="menu_reports" parent="hr.menu_hr_root" sequence="98" name="Reports" groups="hr.group_hr_user"/>
+        <menuitem id="menu_employee_reports" parent="saudi_hr.menu_reports" sequence="1" name="Head Counts" action="saudi_hr.action_employee_reports_form" groups="hr.group_hr_user"/>
+        <menuitem id="menu_joining_employee_reports" parent="saudi_hr.menu_reports" sequence="2" name="New Joining Employees" action="saudi_hr.action_joining_employee_reports_form" groups="hr.group_hr_user"/>
+        <menuitem id="menu_operation_request" parent="hr.menu_hr_root" name="Operation Request" sequence="10" groups="base.group_user"/>
+</odoo>

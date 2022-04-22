@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree view of Attendance Policy -->
+    <record model="ir.ui.view" id="view_attendance_policy_tree">
+        <field name="name">attendance.policy.tree</field>
+        <field name="model">attendance.policy</field>
+        <field name="arch" type="xml">
+            <tree string="Attendance Policy">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form view of Attendance Policy -->
+    <record model="ir.ui.view" id="view_attendance_policy_from">
+        <field name="name">attendance.policy.from</field>
+        <field name="model">attendance.policy</field>
+        <field name="arch" type="xml">
+            <form string="Attendance Policy">
+                <sheet>
+                    <div class="oe_title">
+                        <h2>
+                            <field name="name" placeholder="Policy Name"/>
+                        </h2>
+                    </div>
+                    <group string="Late In Rules">
+                        <group>
+                            <field name="apply_after" required="1" widget="float_time"/>
+                            <!-- <field name="late_in_policy_id" required="1" context="{'default_rule_type': 'late_in'}" domain="[('rule_type', '=', 'late_in')]"/> -->
+                        </group>
+                    </group>
+                    <!-- <group string="Overtime Rules" name="overtime_rule">
+                        <field name="attendance_rules_ids" nolabel="1">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="rule_type"/>
+                                <field name="apply_after" required="1" widget="float_time"/>
+                                <field name="rate" required="1"/>
+                            </tree>
+                        </field>
+                    </group> -->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action of Attendance Policy -->
+    <record model="ir.actions.act_window" id="action_attendance_policy">
+        <field name="name">Attendance Policy</field>
+        <field name="res_model">attendance.policy</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Attendance Policy
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_attendance_policy" action="action_attendance_policy" name="Attendance Policy" parent="hr_attendance.menu_hr_attendance_settings" sequence="3"/>
+</odoo>

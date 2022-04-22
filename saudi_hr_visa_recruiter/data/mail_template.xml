@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<!--     <record id="email_template_recruiter_visa_received" model="mail.template">-->
+<!--        <field name="name">Visa Validate</field>-->
+<!--        <field name="model_id" ref="model_hr_employee_rec_visa"/>-->
+<!--        <field name="email_from"><![CDATA[${(object.env.user.email) or 'noreply@localhost'}]]></field>-->
+<!--        <field name="email_to">${(object.employee_id.work_email)}</field>-->
+<!--        <field name="subject">Visa Notification for ${object.reason_of_visa}</field>-->
+<!--        <field name="body_html"><![CDATA[-->
+<!--                <p>Hello <b>${object.employee_id.name}</b>,</p>-->
+<!--                <p>we get your request for ${object.reason_of_visa} on ${ctx.get('create_date')}. Recently we received it. so you can collect it from our branch.</p>-->
+<!--                <p>Thank you</p>-->
+<!--                <p>${(object.env.user.name)}</p>-->
+<!--           ]]>-->
+<!--        </field>-->
+<!--        <field name="auto_delete" eval="False"/>-->
+<!--    </record>-->
+</odoo>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="clearance_report" model="ir.actions.report">
+        <field name="name">HR Clearance Report</field>
+        <field name="model">hr.employee.clearance</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">saudi_hr_clearance.report_clearance_view</field>
+        <field name="print_report_name">'HR Clearance'</field>
+    </record>
+
+    <template id="report_clearance_view">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <br/><br/>
+                        <h2>
+                            <center><span><b>Clearance</b></span></center>
+                        </h2>
+                        <div class="row mr16">
+                            <div class="col-6">
+                                <strong>Employee: </strong><span t-field="o.employee_id.name"/>
+                            </div>
+                            <div class="col-6" style="text-align:right;">
+                                <strong>Seniority Date: </strong><span t-field="o.seniority_date"/>
+                            </div>
+                        </div>
+                        <div class="row mr16">
+                            <div class="col-6">
+                                <strong>Department: </strong><span t-field="o.department_id.name"/>
+                            </div>
+                            <div class="col-6" style="text-align:right;">
+                                <t t-if="o.last_working_day">
+                                    <strong>Last Day of Work: </strong><span t-field="o.last_working_day"/>
+                                </t>
+                            </div>
+                        </div>
+                        <br/>
+                        <table class="table table-sm o_main_table">
+                            <h5><strong><u>It Department</u></strong></h5>
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;">Item</th>
+                                    <th style="text-align:left;">Status</th>
+                                    <th style="text-align:left;">Handled By</th>
+                                    <th style="text-align:left;">Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.it_dept_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.item"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.item_state"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.handled_by"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <h5><strong><u>HR Department</u></strong></h5>
+                        <table class="table table-sm o_main_table mb32">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;">Item</th>
+                                    <th style="text-align:left;">Status</th>
+                                    <th style="text-align:left;">Handled By</th>
+                                    <th style="text-align:left;">Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.admin_dept_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.item"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.item_state"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.handled_by"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                             </tbody>
+                        </table>
+
+                        <h5><strong><u>Finance Department</u></strong></h5>
+                        <table class="table table-sm o_main_table mb32">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:left;">Item</th>
+                                    <th style="text-align:left;">Status</th>
+                                    <th style="text-align:left;">Handled By</th>
+                                    <th style="text-align:left;">Remarks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o.finance_dept_ids" t-as="line">
+                                    <tr>
+                                        <td>
+                                            <span t-field="line.item"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.item_state"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.handled_by"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="line.remarks"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+
+                        <div class="mt32" style="text-align:right;">
+                            Employee Sign: ___________________________
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

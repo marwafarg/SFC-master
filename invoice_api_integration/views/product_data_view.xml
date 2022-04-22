@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="product_product_default" model="product.product">
+            <field name="name">Default Product</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">1</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+        <record id="product_product_nafath" model="product.product">
+            <field name="name">Nafath fees</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">4</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+        <record id="product_product_ammunition" model="product.product">
+            <field name="name">Ammunition</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">2</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+        <record id="product_product_tickets" model="product.product">
+            <field name="name">Tickets</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">5</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+        <record id="product_product_tax" model="product.product">
+            <field name="name">TAX</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">tax</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+        <record id="product_product_service_charge" model="product.product">
+            <field name="name">Service Charge</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">charge</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+        <record id="product_product_shipping_fees" model="product.product">
+            <field name="name">shipping Fees</field>
+            <field name="categ_id" ref="product.product_category_all"/>
+            <field name="standard_price">1</field>
+            <field name="list_price">1</field>
+            <field name="type">service</field>
+            <field name="product_type">shipping</field>
+            <field name="is_ecommerce">True</field>
+        </record>
+
+    </data>
+</odoo>

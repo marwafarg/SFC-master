@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="view_branch_tree">
+        <field name="name">res.branch.tree</field>
+        <field name="model">res.branch</field>
+        <field name="arch" type="xml">
+            <tree string="Branch">
+                <field name="sequence" widget="handle"/>
+                <field name='name'/>
+                <field name='company_id'/>
+                <field name='partner_id'/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_branch_from">
+        <field name="name">res.branch.from</field>
+        <field name="model">res.branch</field>
+        <field name="arch" type="xml">
+            <form string="Branch">
+              <sheet>
+                <field name="logo" widget="image" class="oe_avatar"/>
+                <div class="oe_title">
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                </div>
+                <notebook colspan="4">
+                    <page string="General Information">
+                        <group>
+                            <group>
+                                <field name="partner_id" readonly="1" required="0" groups="base.group_no_one"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <label for="street" string="Address"/>
+                                <div class="o_address_format">
+                                    <field name="street" placeholder="Street..." class="o_address_street"/>
+                                    <field name="street2" placeholder="Street 2..." class="o_address_street"/>
+                                    <field name="city" placeholder="City" class="o_address_city"/>
+                                    <field name="state_id" class="o_address_state" placeholder="State"/>
+                                    <field name="zip" placeholder="ZIP" class="o_address_zip"/>
+                                    <field name="country_id" placeholder="Country" class="o_address_country"/>
+                                </div>
+                            </group>
+                            <group>
+                                <field name="currency_id" options="{'no_create': True, 'no_open': True}" id="company_currency"/>
+                                <field name="website" widget="url" placeholder="e.g. www.odoo.com"/>
+                                <field name="phone"/>
+                                <field name="email"/>
+                            </group>
+                            <group name="social_media"/>
+                        </group>
+                    </page>
+                    <page string="Sequence">
+                        <group>
+                            <group>
+                                <field name="sale_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="payment_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="invoice_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="invoice_hertz_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="invoice_emper_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="invoice_refund_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="invoice_hertz_refund_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="invoice_emper_refund_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                            </group>
+                            <group>
+                                <field name="purchase_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="bill_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                                <field name="bill_refund_sequence_id" domain="['|', ('company_id', '=', company_id), ('company_id', '=', False)]"/>
+                            </group>
+                        </group>
+                    </page>
+                </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="branch_action">
+        <field name="name">Branches</field>
+        <field name="res_model">res.branch</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Create the Branch
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="acoount_move_branch_form_inherit" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" context="{'company_id': company_id}"/>
+            </field>
+            <xpath expr="//form/sheet/notebook/page/field[@name='line_ids']" position="attributes">
+<!--                <attribute name="context">{'default_type': context.get('default_type'), 'line_ids': line_ids, 'journal_id': journal_id, 'default_partner_id': commercial_partner_id, 'default_currency_id': currency_id != company_currency_id and currency_id or False, 'default_branch_id': branch_id}</attribute>-->
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page/field[@name='line_ids']/tree/field[@name='partner_id']" position="after">
+                <field name="branch_id" required="1" groups="multi_branches.group_multi_branch" context="{'company_id': company_id}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_move_tree_branch" model="ir.ui.view">
+        <field name="name">account.move.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">account.move.search</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_account_move_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">account.move.search</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_move_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_move_line_tree_branch" model="ir.ui.view">
+        <field name="name">account.move.line.tree</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_move_tree_inherit_branch" model="ir.ui.view">
+        <field name="name">account.move.tree</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_tree"/>
+        <field name="arch" type="xml">
+            <field name="journal_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Account Journal -->
+
+    <record id="account_journal_branch_form_inherit" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" required="1" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="account_journal_branch_tree_inherit" model="ir.ui.view">
+        <field name="name">account.journal.tree.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_account_journal_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">account.journal.search</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/filter" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

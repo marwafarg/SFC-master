@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_branch_view_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='sales_person']/field[@name='company_id']" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" options="{'no_create': True}" required="1" attrs="{'readonly': [('state', 'not in', ['draft', 'sent'])]}" context="{'company_id': company_id}"/>
+            </xpath>
+            <field name="company_id" position="attributes">
+                <attribute name="attrs">{'readonly': [('state', 'not in', ['draft', 'sent'])]}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sale_tree_inherit_branch" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sale_qua_tree_inherit_branch" model="ir.ui.view">
+        <field name="name">sale.order.qua.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="branch_id" groups="multi_branches.group_multi_branch" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_branch_view_order__stockform_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_stock.view_order_form_inherit_sale_stock"/>
+        <field name="arch" type="xml">
+            <field name="warehouse_id" position="attributes">
+                <!-- <attribute name="context">{'branch_id': branch_id}</attribute> -->
+                <attribute name="context">{'user_id': user_id}</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_sales_order_filter_inherit_branch" model="ir.ui.view">
+        <field name="name">sale.order.search</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group" position="after">
+                <filter string="Branch" name="Branch" groups="multi_branches.group_multi_branch" context="{'group_by':'branch_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_team_view_form_inherit_branch" model="ir.ui.view">
+        <field name="name">crm.team.form</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <field name="branch_id" options="{'no_create': True}" groups="multi_branches.group_multi_branch" required="1" context="{'company_id': company_id}"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

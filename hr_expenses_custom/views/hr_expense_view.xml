@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="edit_view_hr_expense_view" model="ir.ui.view">
+        <field name="name">hr.expense.form</field>
+        <field name="model">hr.expense</field>
+        <field name="inherit_id" ref="hr_expense.hr_expense_view_form"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='product_id']" position="after">
+                <field name="vendor_name" attrs="{'required':[('tax_ids','!=',[])]}"/>
+                <field name="vendor_tax_id" attrs="{'required':[('tax_ids','!=',[])]}"/>
+            </xpath>
+
+        </field>
+    </record>
+    <record id="account_view_tax_tree_inherit" model="ir.ui.view">
+        <field name="name">account.move.line.form</field>
+        <field name="model">account.move.line</field>
+        <field name="inherit_id" ref="account.view_move_line_tax_audit_tree"/>
+        <field name="arch" type="xml">
+           <xpath expr="//field[@name='company_id']" position="after">
+                <field name="vendor_name" />
+                <field name="vendor_tax_id"/>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
